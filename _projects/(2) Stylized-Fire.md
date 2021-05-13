@@ -13,6 +13,12 @@ The Movies Project is something like **Netflix**, the only difference is that **
 
 ![preview](https://i.imgur.com/q3F8L39.gif)
 
+{% capture carousel_images %}
+https://i.imgur.com/mAHij1R.gif
+https://i.imgur.com/q3F8L39.gif
+{% endcapture %}
+{% include elements/carousel.html %}
+
 ## Search Movies
 
 ![search](https://www.sketchappsources.com/resources/source-image/microsoft-windows-10-virtual-keyboard-diogo-sousa.png)
