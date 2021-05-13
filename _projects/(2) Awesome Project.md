@@ -2,7 +2,7 @@
 name: Stylized Fire
 tools: [Shadergraph, Particle System]
 image: https://www.sketchappsources.com/resources/source-image/movie-badges-jurajjurik.png
-description: This project I recreated a toon style fire effect inspired by Tequila Works, Rime
+description: In this project I recreated a toon style fire effect inspired by Tequila Works, Rime
 ---
 
 # Stylized Fire
