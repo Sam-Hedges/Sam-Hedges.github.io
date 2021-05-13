@@ -1,7 +1,7 @@
 ---
 name: Stylized Fire
 tools: [Shadergraph, Particle System]
-image: https://i.imgur.com/uSGczoy.gif
+image: https://i.imgur.com/q3F8L39.gif
 description: In this project I recreated a toon style fire effect inspired by Tequila Works, Rime
 ---
 
