@@ -9,7 +9,7 @@ description: In this project I recreated a toon style fire effect inspired by Te
 
 The Movies Project is something like **Netflix**, the only difference is that **it's not real**! It doesn't exist! I just created it to demonstrate how the **showcase** page looks like and how you can write whatever you want with full markdown support.
 
-![preview](https://i.imgur.com/peaYQo2.gif)
+![preview](https://i.imgur.com/mAHij1R.gif)
 
 ![preview](https://i.imgur.com/q3F8L39.gif)
 
