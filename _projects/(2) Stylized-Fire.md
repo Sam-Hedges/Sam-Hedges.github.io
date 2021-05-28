@@ -60,7 +60,7 @@ Also I used a **[Vector2 Property](https://docs.unity3d.com/Packages/com.unity.s
 ![GIF](../assets/StylizedFire/Fire2Graph1.gif "Shadergraph Noise Section")
 > `Lorem sup abor hes yohli`
 
-This noise will be used to offset the UVs for effects later. Unlike offsetting by a constant value or time (which changes, but is the same value for every UV coordinate), we are shifting each UV coordinate by a different value, which produces a distortion (aka warping) effect. We also should Subtract 0.5, so the distortion is centered and doesn’t offset more in one direction than the other.
+This noise is used later to offset the UVs to create fire like movement. Unlike offsetting by a constant value or time (which changes, but is the same value for every UV coordinate), we are shifting each UV coordinate by a different value, which produces a distortion (aka warping) effect. We also should Subtract 0.5, so the distortion is centered and doesn’t offset more in one direction than the other.
 
 Multiply this with a Vector1 property named Distortion Strength. We also want the top of the fire to be distorted more than the bottom, so we also Multiply with the Y axis of the UV (G output from Split). We put this result into the Y axis of a Vector2, then into the Offset input on a Tiling And Offset node to apply our distortion, only in the vertical direction.
 
