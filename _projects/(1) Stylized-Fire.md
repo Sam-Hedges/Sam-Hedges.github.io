@@ -20,17 +20,13 @@ description: In this project I recreated a toon style fire effect inspired by Te
 
 A common method of producing a <span style="color:orange">**Fire Effect**</span> in **Unity** is to use a **Particle System** or **VFX Graph**, however the many transparent quads used for each particle creates overdraw which can affect performance, especially for mobile platforms.
 
-- When rendering Opaque geometry, Unity renders objects front-to-back, allowing z-testing to take place; objects obscured by closer objects have their fragments discarded from being rendered, avoiding unnecessary calculations.
+Usually when rendering Opaque geometry, Unity renders objects front-to-back, allowing z-testing to take place; objects obscured by closer objects have their fragments discarded from being rendered, avoiding unnecessary calculations. However when rendering Transparent geometry, Unity has to render those objects back-to-front instead, in order to achieve the correct alpha blending between transparent objects. If a scene contains many of these particles systems the Transparent queue can get filled very quickly, resulting in an overcomplex scene that eats away a large portion of the overall graphics budget.
 
-- However in the Transparent queue, Unity has to render those objects back-to-front instead, in order to achieve the correct alpha blending between see through objects. 
-
-- Rendering many objects on top of each other, like transparent quads from the particle system, can cause the Transparent queue to get overfilled and you end up rendering an overcomplex scene, reducing the overall graphics budget.
-
-A different technique that mitigates this issue is to offset a quad's UVs, using noise, to create a fire effect. This reduces the amount of transparent objects per fire to one and also takes alot less calulations than the particle system. This technique I first saw at an Unreal Engine talk about **[RiME Stylized VFX](https://youtu.be/fwKQyDZ4ark)**.
+A different technique that mitigates this issue is to offset a singlw quad's UVs, using noise, to create a fire effect. This reduces the amount of transparent objects per fire effect to one and also takes alot less calulations than the particle system. I first saw this technique at an Unreal Engine talk about **[RiME Stylized VFX](https://youtu.be/fwKQyDZ4ark)**.
 
 {% include elements/video.html id="fwKQyDZ4ark" %}
 
-I’ve made multiple versions of a fire shader, one a bit different from the RiME talk using the **[Simple Noise](https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Simple-Noise-Node.html)** & **[Voronoi Noise](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Voronoi-Node.html)** nodes applied to a **[Ellipse](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Ellipse-Node.html)** node, and the other using a seamless noise texture to offset a mask texture.
+Based on this concept I’ve made multiple versions of a fire shader to try replicate the benefits, one using procedural noise and shapes, and the other using premade textures.
 
 ---
 
