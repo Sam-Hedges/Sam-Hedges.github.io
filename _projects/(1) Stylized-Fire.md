@@ -10,11 +10,15 @@ description: In this project I recreated a toon style fire effect inspired by Te
 
 ---
 
+### **Skills**
+- Shadergraph
+- Unity
+- Photoshop
+
+<p>&nbsp;</p>
+
 ## **Introduction**
 
-<div class="row">
-{% include about/skills.html title="Skills" source=site.data.stylized-fire-skills %}
-</div>
 
 ---
 
@@ -22,7 +26,7 @@ A common method of producing a <span style="color:orange">**Fire Effect**</span>
 
 Usually when rendering Opaque geometry, Unity renders objects front-to-back, allowing z-testing to take place; objects obscured by closer objects have their fragments discarded from being rendered, avoiding unnecessary calculations. However when rendering Transparent geometry, Unity has to render those objects back-to-front instead, in order to achieve the correct alpha blending between transparent objects. If a scene contains many of these particles systems the Transparent queue can get filled very quickly, resulting in an overcomplex scene that eats away a large portion of the overall graphics budget.
 
-A different technique that mitigates this issue is to offset a singlw quad's UVs, using noise, to create a fire effect. This reduces the amount of transparent objects per fire effect to one and also takes alot less calulations than the particle system. I first saw this technique at an Unreal Engine talk about **[RiME Stylized VFX](https://youtu.be/fwKQyDZ4ark)**.
+A different technique that mitigates this issue is to offset a single quad's UVs, using noise, to create a fire effect. This reduces the amount of transparent objects per fire effect to one, means many of these fires can run in parallel on the GPU, and also takes less calulations than the particle system. I first saw this technique at an Unreal Engine talk about **[RiME Stylized VFX](https://youtu.be/fwKQyDZ4ark)**.
 
 {% include elements/video.html id="fwKQyDZ4ark" %}
 
@@ -43,9 +47,7 @@ Pixel Rendered
 
 ---
 
-In order to create the movement needed for the <span style="color:orange">**Fire Effect**</span>, I've used the **[Time Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Time-Node.html)** and **[Multiply](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Multiply-Node.html)** it by a float to control the magnitude of the scrolling. To get the scrolling to move upwards I **[Negate](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Negate-Node.html)** it, as the default **[Time](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Time-Node.html)** output scrolls downwards, so the opposite is upwards. I then fed this into the Y input on a **[Vector2 Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Vector-2-Node.html)**, leaving X as 0, which is used as the offset input for a **[Tiling And Offset Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Tiling-And-Offset-Node.html)**, so the movement is only in the Y axis.
-
-Also I used a **[Vector2 Property](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Property-Types.html)** to control the scaling of the tiling input, allowing the scale of the noise to changed in the **[Inspector](https://docs.unity3d.com/Manual/UsingTheInspector.html)**. The output from our **[Tiling And Offset](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Tiling-And-Offset-Node.html)** will then be put into a **[Simple Noise Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Simple-Noise-Node.html)** and **[Voronoi Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Voronoi-Node.html)**.
+In order to create the movement needed for the <span style="color:orange">**Fire Effect**</span>, I've sampled the **Time** and multiplied it by a float to control the magnitude of the scrolling. To get the scrolling to move upwards I inverted it, as the default **Time** output scrolls the texure downwards. I then used this value as the Y component of a **Vector2**, leaving the X component as 0, which is used as the offset for the **Tiling And Offset Node**. I used a **Vector2 Property** to control the scale of the tiling, allowing the scale of the noise to changed in the **Inspector**. The scrolling UV's from the **Tiling And Offset** will then be used as the UV input for a **[Simple Noise Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Simple-Noise-Node.html)** and **[Voronoi Node](https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Voronoi-Node.html)**.
 
 {% include elements/figure.html image="../assets/StylizedFire/Fire2Graph1.gif" caption="Add Caption" %}
 
@@ -99,4 +101,3 @@ lopers
 
 ---
 
-lopers
