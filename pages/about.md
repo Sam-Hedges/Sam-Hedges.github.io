@@ -48,11 +48,44 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 
 ---
 
-# **Career**
+# **Industry Experience**
 
 ---
-<div class="row">
-{% include about/timeline.html %}
+
+<div class="col mt-4">
+  <div class="timeline-body bg-themed">
+  <!-- TO CHANGE THE TIMELINE EDIT site.data.ENTER_YML_FILE_HERE -->
+    {% for item in site.data.industry-timeline %} 
+      <div class="timeline-item">
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+---
+
+# **Work History**
+
+---
+
+<div class="col mt-4">
+  <div class="timeline-body bg-themed">
+  <!-- TO CHANGE THE TIMELINE EDIT site.data.ENTER_YML_FILE_HERE -->
+    {% for item in site.data.work-timeline %} 
+      <div class="timeline-item">
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 ---
