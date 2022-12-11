@@ -7,6 +7,8 @@ repository: Sam-Hedges/Sam-Hedges.github.io # Change to <your-username>/<your-us
 remote_theme: Sam-Hedges/Sam-Hedges.github.io
 open_new_tab: true # Opens external URLs in new tab (works for posts, projects and navbar only)
 
+# bundle exec jekyll serve --incremental
+
 ### Plugins ###
 plugins:
   - jemoji
