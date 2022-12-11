@@ -4,7 +4,7 @@ description: >-
   I'm an Aspiring Gameplay Programmer and Technical Artist 🕹️
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: Sam-Hedges/Sam-Hedges.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
-remote_theme: Sam-Hedges/portfolYOU-SamHedges
+remote_theme: Sam-Hedges/Sam-Hedges.github.io
 open_new_tab: true # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 ### Plugins ###
@@ -50,13 +50,13 @@ collections:
 
 ### Disqus ###
 disqus:
-  shortname: your-short-name-disqus # Your website Shortname on disqus
+  shortname: Sam-Hedges-Portfolio # Your website Shortname on disqus
 
 ### Analytics ###
 analytics:
-  enabled: false # Set true to enable analytics
+  enabled: true # Set true to enable analytics
   google:
-    tracking_id: your-google-tracking-id
+    tracking_id: G-Y71N2C8PPS
 
 ### Defaults for collections ###
 defaults:
