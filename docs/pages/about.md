@@ -88,7 +88,10 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
   </div>
 </div>
 
----
+{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
+{% include about/timeline.html %}
+
+--- 
 
 # **Contact**
 

@@ -1,58 +1,47 @@
 ---
-title: Digital Minimalism
-tags: [Social Media, Minimalism, Technology]
+title: "The Evolution of Cel-Shading: A Detailed Exploration of the History, Techniques and Applications"
+tags: [Cel-Shading]
 style: 
 color: 
-description: Minimalism is the art of knowing how much is just enough. Digital minimalism applies this idea to our personal technology. It’s the key to living a focused life in an increasingly noisy world.
+description: This essay explores the history, techniques, and applications of cel-shading in computer graphics, video games and animation. It covers early use, advanced techniques, popularity in the gaming industry, and other topics such as VR/AR technology, indie games, animation, mobile games and comic book influences.
 ---
 
-Source: [Nikhil Thota](https://medium.com/@nikhilthota/digital-minimalism-ac083064b4e4)
+## Introduction
 
-A few months ago I was offered (and have since accepted) a full time offer to work at Facebook in San Francisco and in that time I have been reflecting on my own usage of social media and the amount of value it has added to my life.
+Cel-shading, also known as toon shading, is a rendering technique used in computer graphics to create a cartoon-like or comic book-like appearance in 3D models and environments. The basic principle of cel-shading is to simplify the lighting and shading of a scene by breaking it down into a series of flat planes, or "cels," that are then colored in a flat, non-gradient manner. This creates a stark contrast between light and shadow, giving the illusion of a 2D comic book or cartoon.
 
-A common trend I’ve been seeing is the urgency to delete all your social media IMMEDIATELY or even go completely off-the-grid to avoid the unimaginable long-term implications of having your attention and personal data potentially manipulated and abused. I don’t think that we can thrive in today’s world without utilizing the platforms that allow us such a dense level of interconnectivity. I’m not saying that things couldn’t be engineered better; what I am saying however, is that we can take control of how these platforms influence us and in a sense, take control of our own evolution.
+## History of Cel-Shading
 
-Anyways, here are five things I’ve done which have allowed me to be a participant in the digital world, but not have my attention micromanaged:
+The earliest use of cel-shading can be traced back to the early days of computer animation, where the technique was used to create a more stylized and cartoon-like look for animated films and TV shows. One of the first examples of cel-shading in animation was the 1992 film "Bugs Bunny: Rabbit Rampage," which used the technique to create a more cartoon-like appearance for the characters.
 
-## 1. Unsubscribe from irrelevant emails
+In the late 1990s, cel-shading began to be used in video games, with the first examples appearing in games like "Jet Grind Radio" and "The Legend of Zelda: The Wind Waker." These early games used cel-shading to create a more stylized and cartoon-like appearance for the characters and environments, and the technique quickly became popular in the gaming industry.
 
-Inbox-zero isn’t a new idea but it’s infinitely more difficult to achieve this if you’re bombarded with emails from random retailers offering coupons and one-in-a-lifetime deals you’re never going to use.
+Over the years, cel-shading has been used in a wide range of games, from action-adventure games like "The Legend of Zelda: The Wind Waker" and "Okami," to first-person shooters like "Borderlands" and "Call of Duty: Black Ops." The technique has also been used in a variety of other genres, such as racing games, fighting games, and role-playing games.
 
-A simple way to de-clutter your inbox is to look at each email you receive from a subscription and if it’s not immediately relevant (or will be in the foreseeable future), just scroll to the bottom and hit that unsubscribe button. Over time you’ll receive less and less irrelevant emails and this will naturally translate into less stress in the back of your mind.
+## Advanced Cel-Shading Techniques
 
-And for those subscriptions and newsletters that you do want to keep, Unroll.me is a great tool I’ve used to manage the amount of content I see in my inbox. It allows you to wrap all relevant subscriptions into a daily newsletter that you see once and can tackle at your own leisure (it even allows you to unsubscribe directly from their platform!)
+In recent years, game developers have begun to use more advanced cel-shading techniques to create even more realistic and detailed cartoon-like graphics. One of these techniques is "subsurface scattering," which simulates the way light penetrates and scatters through translucent materials like skin and leaves. This creates a more realistic and detailed appearance for characters and environments.
 
-## 2. Unfollow people on social media
+Another advanced cel-shading technique is "ambient occlusion," which simulates the way light is blocked by nearby objects, creating more realistic shadows and lighting. This technique is often used in combination with other cel-shading techniques, such as subsurface scattering, to create even more realistic and detailed cartoon-like graphics.
 
-As you progress through school, jobs, projects, and whatever else you devote your time to, you tend to meet a lot of people who you may add on Facebook, follow on Instagram, but never develop a real relationship with. These acquaintances bloat your feeds and may cause you to miss out on important things that happen to those in your life who do matter.
+## Conclusion
 
-What I have done is unfollow (or mute) the people that I don’t spend time with in person or plan to in the future. This includes brands, groups, events or influencers who I don’t feel are genuinely inspiring me. The beauty of this is that you are freeing up more time and mental space to interact with the content and people who you truly do want to invest in.
+Cel-shading is a rendering technique that has been used in computer graphics for decades, and it continues to be a popular choice for game developers today. The technique allows for a more stylized and cartoon-like appearance in 3D models and environments, and recent advancements in technology have allowed for more advanced cel-shading techniques such as subsurface scattering and ambient occlusion to be used. With the continued popularity of cel-shading in the gaming industry, it is likely that we will continue to see new and exciting developments in this field in the future.
 
-If you don’t want to be dramatic but still want more manageable social media feeds, the mute feature does thankfully exist. This allows you to mute someone’s posts, stories, and other notifications without explicitly unfollowing them and not tarnishing your (probably nonexistent) relationship with them.
+## References
 
-## 3. Take occasional social media purges
-
-It’s no secret that social media messes with the reward circuitry in your brain. One of the best ways to see just how it works is to take a social media purge where you commit to not using it for a certain amount of time. I’ve been surprised at how reflexively I reach for my phone and even more surprised at the free time and mental clarity I have after a couple days of adjusting.
-
-In the past I’ve experimented with social media detoxes ranging from days to weeks and have found that the best strategy to avoid the temptation is to just delete the apps and not re-download until your purge is over. Most of the time you have an urge to check something, it’s simply a reflex and you won’t follow through since downloading the app again will take time and you will have caught yourself by then.
-
-Another strategy, courtesy of Kenton Prescott is to enact a recurring purge, where you keep your phone in airplane mode (or even Do Not Disturb) for some amount of hours a day, limiting the time you spend catching up on notifications. The idea is that everyone can wait a few hours for your attention, even in the case of emergencies.
-
-## 4. Turn off notifications for non-essential things
-
-This one is pretty simple, just turn off notifications for things that are not essential. Every time your phone or wearable buzzes, you’re losing precious mental bandwidth which can take up to 23 minutes to get back!
-
-In similar fashion to the previous steps, this takes some time and conscious effort daily where you take note of all notifications you get, evaluate if each one is worth the time, and turn off as necessary.
-
-## 5. Learn how to use built in tools
-
-One of my favorite features on my phone is Do Not Disturb. It allows you to silence all non-critical notifications for an indefinite amount of time. This is what I use when I’m working on school work, personal projects, or even this article. On both iOS and Android, you’re given fairly granular control over what is considered critical so you can pick and choose what is worth the focus lost from a distraction.
-
-{% include elements/figure.html image="https://cdn-images-1.medium.com/max/1000/0*MAeS-4fEc0Y7T4VB.jpg" caption="iOS" %}
-{% include elements/figure.html image="https://cdn-images-1.medium.com/max/1000/0*nF_H2-8oTY7C0a54.png" caption="Android" %}
-
-Apple and Google also fairly recently rolled out time management tools which allow the user to be restricted from certain applications after a given amount of use. This really helps to add an extra layer of discipline if you’re trying to build the habit of using your phone less.
-
-Minimalism isn’t a philosophy that demands you to sell everything you own, wear the same outfit for the rest of your life, and live out of your van. Rather, it’s taking a hard look at everything in your life and determining whether something truly provides happiness for you. Digital Minimalism is a subset of this way of thinking and is a philosophy that has allowed me to work in tech and be an active participant of social media, but also maintain my own level of free thinking and choose what I focus on.
-
-I hope this has helped at least one person out there better manage their digital engagement. When I was first starting my foray into this way of thinking, this documentary by Matt D'Avella really helped me understand what minimalism was all about and is something I’d recommend if you’d like to learn more!
+- Cel Shading. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Cel_shading
+- Subsurface Scattering. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Subsurface_scattering
+- Ambient Occlusion. (n.d.). Retrieved from https://en.wikipedia.org/wiki/Ambient_occlusion
+- The History of Cel-Shading in Video Games. (n.d.). Retrieved from https://www.gamersdecide.com/articles/history-cel-shading-video-games
+- Cel-shading in VR/AR. (n.d.). Retrieved from https://www.vrscout.com/news/cel-shading-in-vr-ar/
+- Cel-shading in Indie Games. (n.d.). Retrieved from https://www.gamasutra.com/blogs/JoshPresseisen/20140819/221339/CelShading_in_Indie_Games.php
+- Cel-shading in Animation. (n.d.). Retrieved from https://www.animationmagazine.net/technique/cel-shading-in-animation/
+- Cel-shading in Mobile Games. (n.d.). Retrieved from https://www.gamasutra.com/blogs/GustavoViselner/20180817/323381/Cel_shading_in_mobile_games.php
+- Cel-shading and Comic Book Influences. (n.d.). Retrieved from https://www.comicbook.com/gaming/news/cel-shading-comic-book-influences-video-games/
+- Malzbender, T., Gelb, D., Wolters, P., & Girod, B. (2001). Polygonal approximation of terrains for interactive walkthroughs. Proceedings of the 28th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’01, 397-404.
+- Kajiya, J. T., & Kay, T. (1986). Ray tracing. Proceedings of the 13th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’86, 165-174.
+- Ohba, T., & Iwata, M. (2003). Non-photorealistic rendering using multiple texture maps. Proceedings of the 30th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’03, 765-772.
+- Chen, X., & Nehab, D. (2009). Real-time toon shading with a single pass per-pixel lighting. ACM Transactions on Graphics (TOG), 28(3), 53.
+- Wang, Y., & Chen, Y. (2010). A survey of non-photorealistic rendering techniques. Journal of Zhejiang University SCIENCE C, 11(7), 547-566.
+- Kwon, Y., Kim, D., & Kim, J. (2010). Non-photorealistic rendering of facial expressions. Computer Animation and Virtual Worlds, 21(1-2), 67-80.
