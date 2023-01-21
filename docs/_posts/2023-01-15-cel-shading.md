@@ -50,15 +50,15 @@ Cel-shading is a rendering technique that has been used in computer graphics for
 
 ## References
 
-- Cel Shading. (n.d.). Retrieved from [https://en.wikipedia.org/wiki/Cel_shading](https://en.wikipedia.org/wiki/Cel_shading)
-- Subsurface Scattering. (n.d.). Retrieved from [https://en.wikipedia.org/wiki/Subsurface_scattering](https://en.wikipedia.org/wiki/Subsurface_scattering)
-- Ambient Occlusion. (n.d.). Retrieved from [https://en.wikipedia.org/wiki/Ambient_occlusion](https://en.wikipedia.org/wiki/Ambient_occlusion)
-- The History of Cel-Shading in Video Games. (n.d.). Retrieved from [https://www.gamersdecide.com/articles/history-cel-shading-video-games](https://www.gamersdecide.com/articles/history-cel-shading-video-games)
-- Cel-shading in VR/AR. (n.d.). Retrieved from [https://www.vrscout.com/news/cel-shading-in-vr-ar/](https://www.vrscout.com/news/cel-shading-in-vr-ar/)
-- Cel-shading in Indie Games. (n.d.). Retrieved from [https://www.gamasutra.com/blogs/JoshPresseisen/20140819/221339/CelShading_in_Indie_Games.php](https://www.gamasutra.com/blogs/JoshPresseisen/20140819/221339/CelShading_in_Indie_Games.php)
-- Cel-shading in Animation. (n.d.). Retrieved from [https://www.animationmagazine.net/technique/cel-shading-in-animation/](https://www.animationmagazine.net/technique/cel-shading-in-animation/)
-- Cel-shading in Mobile Games. (n.d.). Retrieved from [https://www.gamasutra.com/blogs/GustavoViselner/20180817/323381/Cel_shading_in_mobile_games.php](https://www.gamasutra.com/blogs/GustavoViselner/20180817/323381/Cel_shading_in_mobile_games.php)
-- Cel-shading and Comic Book Influences. (n.d.). Retrieved from [https://www.comicbook.com/gaming/news/cel-shading-comic-book-influences-video-games/](https://www.comicbook.com/gaming/news/cel-shading-comic-book-influences-video-games/)
+- Cel Shading. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Cel_shading>
+- Subsurface Scattering. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Subsurface_scattering>
+- Ambient Occlusion. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Ambient_occlusion>
+- The History of Cel-Shading in Video Games. (n.d.). Retrieved from <https://www.gamersdecide.com/articles/history-cel-shading-video-games>
+- Cel-shading in VR/AR. (n.d.). Retrieved from <https://www.vrscout.com/news/cel-shading-in-vr-ar/>
+- Cel-shading in Indie Games. (n.d.). Retrieved from <https://www.gamasutra.com/blogs/JoshPresseisen/20140819/221339/CelShading_in_Indie_Games.php>
+- Cel-shading in Animation. (n.d.). Retrieved from <https://www.animationmagazine.net/technique/cel-shading-in-animation/>
+- Cel-shading in Mobile Games. (n.d.). Retrieved from <https://www.gamasutra.com/blogs/GustavoViselner/20180817/323381/Cel_shading_in_mobile_games.php>
+- Cel-shading and Comic Book Influences. (n.d.). Retrieved from <https://www.comicbook.com/gaming/news/cel-shading-comic-book-influences-video-games/>
 - Malzbender, T., Gelb, D., Wolters, P., & Girod, B. (2001). Polygonal approximation of terrains for interactive walkthroughs. Proceedings of the 28th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’01, 397-404.
 - Kajiya, J. T., & Kay, T. (1986). Ray tracing. Proceedings of the 13th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’86, 165-174.
 - Ohba, T., & Iwata, M. (2003). Non-photorealistic rendering using multiple texture maps. Proceedings of the 30th annual conference on Computer graphics and interactive techniques - SIGGRAPH ’03, 765-772.
