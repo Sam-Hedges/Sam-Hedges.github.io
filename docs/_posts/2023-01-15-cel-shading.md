@@ -3,7 +3,7 @@ title: "The Evolution of Cel-Shading: A Detailed Exploration of the History, Tec
 tags: [Cel-Shading]
 style: 
 color: 
-description: This essay explores the history, techniques, and applications of cel-shading in computer graphics, video games and animation. It covers early use, advanced techniques, popularity in the gaming industry, and other topics such as VR/AR technology, indie games, animation, mobile games and comic book influences.
+description: This post explores the history, techniques, and applications of cel-shading in computer graphics, video games and animation. It covers early use, advanced techniques, popularity in the gaming industry, and other topics such as VR/AR technology, indie games, animation, mobile games and comic book influences.
 ---
 
 ## Introduction
