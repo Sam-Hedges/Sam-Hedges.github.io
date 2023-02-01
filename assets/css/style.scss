@@ -1,3 +1,6 @@
----
----
-@import "portfolYOU";
+--- --- @import "portfolYOU";
+
+figcaption {
+    cursor: pointer;
+    pointer-events: none;
+}
