@@ -2,41 +2,96 @@
 layout: page
 title: About
 permalink: /about/
-weight: 4
+weight: 3
 ---
 
-# **About Me**
+# **About Me 🕹️**
 
 ---
 
 Hi I am **{{ site.author.name }}** :wave:,<br>
 
-As a person, I am passionate, hard-working, motivated, creative, determined, and friendly. These traits make me well-rounded and capable of tackling challenges head-on, no matter the situation. I believe in finding common ground in conflicts, and work to find a solution that benefits everyone involved. My passion for teamwork and leadership shines through in my previous experience as an evening merchandiser, where I took on tasks and allocated jobs to my colleagues in order to free up the supervisor to manage the team better.
-
-Above all, I am passionate about my university work. I love the challenge of creating unique mechanics for the games I work on, and I am inspired by the creativity of others in my field. This passion drives me to further my education and put myself in the best possible position to succeed in the industry.
+I’m an aspiring Programmer and Technical Artist currently a second year student studying Computer Games Programming (BSc) at **[Anglia Ruskin University in Cambridge, UK](https://goo.gl/maps/3tmaKfV1jfGMTere9)**. I’ve been making and studying games for over 7 years, currently proficient with but not limited to Unity & C#, Unreal & C++, and HLSL / CG, as well as having had experience with other software including Adobe Photoshop, Adobe Premiere Pro, Adobe After Effects and Substance Designer. I'm passionate about making unique and impressive visual effects/shaders and combining those with compelling gameplay mechanics and engine systems. Seeing my work come together in creative collaborative projects and seeing my peers’ talented work, fuels my desire to keep learning and makes me eager to be part of the games industry. Currently, although I have no major achievements other than a distinction in my college course, I consider my perseverance in advancing my games development skills to be my greatest accomplishment. I’ve greatly improved since my start as a developer and feel confident that nothing is out of my reach as I continue to keep up to date with the latest industry trends. I’m currently aiming for a full-time position within a Game Studio, whether indie or AAA, to gain experience in the industry and expand my skills, knowledge & portfolio. Reach out to **[sam.hedges.sh@gmail.com](mailto:sam.hedges.sh@gmail.com)** or my socials below to connect!
 
 ---
 
-# **Interests**
-
-In my free time, I have several interests that keep me active and engaged. I am dedicated to my personal fitness, and make it a priority to visit the gym multiple times a week. I also enjoy reading books such as Jordan Peterson's "12 Rules for Life" or fiction such as "One Piece." My creative side comes out in my love for making electronic and rap music.
-
-## **Music**
-
-{% include elements/video.html id="ObDzxCUi1Jc" %}  
-
-## **Recommedend Read**
-
-{% include elements/figure.html image="../assets/About/12rulesForLifeCover.jpg" %}
-
-"12 Rules for Life: An Antidote to Chaos" by Jordan Peterson is a must-read for anyone looking to enhance their life and gain a more profound comprehension of the world. This book provides useful advice on how to handle the complexities of contemporary life through Peterson's personal experiences, academic research, and philosophical insights. A crucial theme in the book is taking control of your life, instead of blaming external factors for difficulties. Peterson motivates readers to reflect on their beliefs, values, and behaviors, and to embrace the opportunities and challenges life presents. He also brings forth timeless wisdom from the past, including ancient mythologies, biblical stories, and cultural traditions that have shaped human societies for centuries. Through these tales, Peterson offers a comprehensive understanding of the human condition and helps readers develop a sense of purpose and meaning in a rapidly changing world.
-
-{% include elements/figure.html image="../assets/About/12rulesForLifeInfographic.png" %}
-> <https://readingraphics.com/book-summary-12-rules-for-life/>
-<a href="https://readingraphics.com/book-summary-12-rules-for-life/">Source</a>
-Whether you're searching for personal growth guidance, meaning in your life, or navigating modern society challenges, "12 Rules for Life" is a must-read for all.
+# **Technical Skills**
 
 ---
+
+## Programming Languages
+- C#
+- C++
+- HLSL & CG
+- HTML & CSS
+- Python
+- VB
+
+<p>&nbsp;</p>
+
+## Software Experience
+- Engines
+    - Unity: 2D, 3D, VR
+    - Unreal Engine: 3D
+    - Godot: 3D
+- Adobe
+    - Photoshop
+    - After Effects
+    - Premiere Pro
+- Maya & Blender
+- Shaders & VFX via Node Based Systems
+- 3rd Party Tools: Cinemachine
+- Source Control Programs: Github, Sourcetree
+- Agile Mangement Systems: Jira, Trello
+
+<p>&nbsp;</p>
+
+---
+
+# **Industry Experience**
+
+---
+
+<div class="col mt-4">
+  <div class="timeline-body bg-themed">
+  <!-- TO CHANGE THE TIMELINE EDIT site.data.ENTER_YML_FILE_HERE -->
+    {% for item in site.data.industry-timeline %} 
+      <div class="timeline-item">
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+---
+
+# **Work History**
+
+---
+
+<div class="col mt-4">
+  <div class="timeline-body bg-themed">
+  <!-- TO CHANGE THE TIMELINE EDIT site.data.ENTER_YML_FILE_HERE -->
+    {% for item in site.data.work-timeline %} 
+      <div class="timeline-item">
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          <h6 class="date">{{ item.from }} — {{ item.to }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
+{% include about/timeline.html %}
+
+--- 
 
 # **Contact**
 
