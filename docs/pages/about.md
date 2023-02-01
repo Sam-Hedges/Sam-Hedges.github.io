@@ -21,9 +21,13 @@ Above all, I am passionate about my university work. I love the challenge of cre
 
 In my free time, I have several interests that keep me active and engaged. I am dedicated to my personal fitness, and make it a priority to visit the gym multiple times a week. I also enjoy reading books such as Jordan Peterson's "12 Rules for Life" or fiction such as "One Piece." My creative side comes out in my love for making electronic and rap music.
 
-## **Music**
+---
 
-{% include elements/video.html id="ObDzxCUi1Jc" %}  
+## **Fitness**
+
+
+
+---
 
 ## **Recommedend Read**
 
@@ -31,10 +35,13 @@ In my free time, I have several interests that keep me active and engaged. I am 
 
 "12 Rules for Life: An Antidote to Chaos" by Jordan Peterson is a must-read for anyone looking to enhance their life and gain a more profound comprehension of the world. This book provides useful advice on how to handle the complexities of contemporary life through Peterson's personal experiences, academic research, and philosophical insights. A crucial theme in the book is taking control of your life, instead of blaming external factors for difficulties. Peterson motivates readers to reflect on their beliefs, values, and behaviors, and to embrace the opportunities and challenges life presents. He also brings forth timeless wisdom from the past, including ancient mythologies, biblical stories, and cultural traditions that have shaped human societies for centuries. Through these tales, Peterson offers a comprehensive understanding of the human condition and helps readers develop a sense of purpose and meaning in a rapidly changing world.
 
-{% include elements/figure.html image="../assets/About/12rulesForLifeInfographic.png" %}
-> <https://readingraphics.com/book-summary-12-rules-for-life/>
-<a href="https://readingraphics.com/book-summary-12-rules-for-life/">Source</a>
 Whether you're searching for personal growth guidance, meaning in your life, or navigating modern society challenges, "12 Rules for Life" is a must-read for all.
+
+---
+
+## **Music**
+
+{% include elements/video.html id="ObDzxCUi1Jc" %}  
 
 ---
 
