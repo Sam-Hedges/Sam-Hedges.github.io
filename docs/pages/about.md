@@ -35,11 +35,15 @@ Whether you're searching for personal growth guidance, meaning in your life, or 
 
 ## **Fitness**
 
+{% include elements/figure.html image="../assets/About/gymPost.png" caption="Anniversary post of local gym, including most active members and staff (Leftmost Is me)" %}
+
 My fitness journey began in May 2022, and since then, it has been a life-changing experience for me. Going to the gym has not only helped me achieve my physical fitness goals, but it has also given me a sense of structure and discipline in my life.
 
 Each time I go to the gym, I feel a rush of adrenaline and determination to push myself further. I am constantly challenging myself to lift heavier weights, run faster and longer, and try new exercises. And, with each passing day, I can see the progress I have made and feel proud of what I have accomplished.
 
 In addition to the physical benefits, going to the gym has also helped me develop a stronger mental and emotional state. I have found that my focus and drive have improved, and I am able to approach challenges in a more calm and controlled manner. The gym has become a sanctuary for me, a place where I can let go of stress and focus solely on my health and well-being.
+
+Having been a member of my local gym for a several months now and through regular visits and participating in their events, I have formed a strong bond with the staff and other members. I now consider them a second family and look forward to all the fun events they host every month.
 
 My fitness journey has been and will continue to be a transformative experience that has helped me grow both physically and mentally. I am grateful for the discipline and structure that going to the gym has given me, and I am excited to see what the future holds as I continue to push myself to new heights.
 
