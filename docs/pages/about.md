@@ -35,8 +35,6 @@ Whether you're searching for personal growth guidance, meaning in your life, or 
 
 ## **Fitness**
 
-{% include elements/figure.html image="../assets/About/progressPic.jpg" caption="My Current Progress Picture" %}
-
 My fitness journey began in May 2022, and since then, it has been a life-changing experience for me. Going to the gym has not only helped me achieve my physical fitness goals, but it has also given me a sense of structure and discipline in my life.
 
 Each time I go to the gym, I feel a rush of adrenaline and determination to push myself further. I am constantly challenging myself to lift heavier weights, run faster and longer, and try new exercises. And, with each passing day, I can see the progress I have made and feel proud of what I have accomplished.
