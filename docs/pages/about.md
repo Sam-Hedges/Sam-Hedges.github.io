@@ -17,7 +17,7 @@ I pride myself on being a hardworking and ambitious individual with a great pass
 
 # **Interests**
 
-In my free time, I am dedicated to keeping both my body and mind active and engaged. My love for personal fitness drives me to visit the gym multiple times a week, while my interests in literature and music allow me to explore my creative side. I enjoy reading both thought-provoking books as well as fiction, my all time favourite book series being [The Inheritance Cycle: Christopher Paolini](https://www.paolini.net/biographies/christopher-paolini-full/inheritance-cycle/). I also find great fulfillment in making electronic and rap music. Whether it's keeping my body in shape or indulging my creative passions, I make sure to always have activities that stimulate and challenge me in my free time.
+In my free time, I am dedicated to keeping both my body and mind active and engaged. My love for personal fitness drives me to visit the gym multiple times a week, while my interests in literature and music allow me to explore my creative side. I enjoy reading both thought-provoking books as well as fiction, my all-time favourite book series being [The Inheritance Cycle by Christopher Paolini](https://www.paolini.net/biographies/christopher-paolini-full/inheritance-cycle/). I also find great fulfilment in making electronic and rap music. Whether it’s keeping my body in shape or indulging my creative passions, I make sure to always have activities that stimulate and challenge me in my free time.
 
 ---
 
