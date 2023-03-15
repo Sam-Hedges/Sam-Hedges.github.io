@@ -1,5 +1,5 @@
 ---
-name: 🔥 Stylized Fire 🔥
+name: Stylized Fire
 tags: [Shadergraph, Particle System]
 tools: [Shadergraph, Particle System]
 image: ../assets/StylizedFire/StylizedFire2.gif
