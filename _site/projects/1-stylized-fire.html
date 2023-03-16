@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="🔥 Stylized Fire 🔥">
+  <meta property="og:description" content="In this project I recreated a toon style fire effect inspired by Tequila Works, Rime">
+  <meta property="og:image" content="../assets/StylizedFire/StylizedFire2.gif">
+
+  <title>🔥 Stylized Fire 🔥</title>
+  <meta name="description" content="In this project I recreated a toon style fire effect inspired by Tequila Works, Rime">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <a class="navbar-brand" href="/"><h5><b>Sam Hedges</b></h5></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link active" href="/projects/">Projects [WIP]</a>
+
+      <a class="nav-item nav-link " href="/about/">About</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <h1 id="-stylized-fire-"><strong>🔥 Stylized Fire 🔥</strong></h1>
+
+<hr />
+
+<h2 id="introduction"><strong>Introduction</strong></h2>
+
+<div class="row">
+<div class="col-lg">
+
+  <h2 class="mb-3">Skills</h2>
+
+  
+
+  <div class="row justify-content-between align-items-center">
+    <div class="col-10">
+      <p class="mb-1">Shadergraph</p>
+    </div>
+    <div class="col-2 text-right">
+      <p class="mb-1 text-muted">70%</p>
+    </div>
+  </div>
+
+  <div class="progress mb-4 bg-themed" style="height: 8px;">
+    <div class="progress-bar bg-danger wow animated slideInLeft" data-wow-delay="0.05" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+    </div>
+  </div>
+
+  
+
+  <div class="row justify-content-between align-items-center">
+    <div class="col-10">
+      <p class="mb-1">Unity</p>
+    </div>
+    <div class="col-2 text-right">
+      <p class="mb-1 text-muted">15%</p>
+    </div>
+  </div>
+
+  <div class="progress mb-4 bg-themed" style="height: 8px;">
+    <div class="progress-bar bg-success wow animated slideInLeft" data-wow-delay="0.1" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+    </div>
+  </div>
+
+  
+
+  <div class="row justify-content-between align-items-center">
+    <div class="col-10">
+      <p class="mb-1">Photoshop</p>
+    </div>
+    <div class="col-2 text-right">
+      <p class="mb-1 text-muted">15%</p>
+    </div>
+  </div>
+
+  <div class="progress mb-4 bg-themed" style="height: 8px;">
+    <div class="progress-bar bg-primary wow animated slideInLeft" data-wow-delay="0.15" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+    </div>
+  </div>
+
+  
+
+</div>
+</div>
+
+<hr />
+
+<p>A common method of producing a <span style="color:orange"><strong>Fire Effect</strong></span> in <strong>Unity</strong> is to use a <strong>Particle System</strong> or <strong>VFX Graph</strong>, however the many transparent quads used for each particle creates overdraw which can affect performance, especially for mobile platforms.</p>
+
+<p>Usually when rendering Opaque geometry, Unity renders objects front-to-back, allowing z-testing to take place; objects obscured by closer objects have their fragments discarded from being rendered, avoiding unnecessary calculations. However when rendering Transparent geometry, Unity has to render those objects back-to-front instead, in order to achieve the correct alpha blending between transparent objects. If a scene contains many of these particles systems the Transparent queue can get filled very quickly, resulting in an overcomplex scene that eats away a large portion of the overall graphics budget.</p>
+
+<p>A different technique that mitigates this issue is to offset a singlw quad’s UVs, using noise, to create a fire effect. This reduces the amount of transparent objects per fire effect to one and also takes alot less calulations than the particle system. I first saw this technique at an Unreal Engine talk about <strong><a href="https://youtu.be/fwKQyDZ4ark">RiME Stylized VFX</a></strong>.</p>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/fwKQyDZ4ark" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>Based on this concept I’ve made multiple versions of a fire shader to try replicate the benefits, one using procedural noise and shapes, and the other using premade textures.</p>
+
+<hr />
+
+<div class="list-group my-3"><a class="list-group-item active disabled text-white">Contents</a><a class="list-group-item list-group-item-action" href="#procedural">Procedural</a><a class="list-group-item list-group-item-action" href="#textured">
+Textured</a><a class="list-group-item list-group-item-action" href="#pixel-rendered">
+Pixel Rendered</a>
+
+</div>
+
+<hr />
+
+<h3 id="procedural"><strong>Procedural</strong></h3>
+
+<hr />
+
+<p>In order to create the movement needed for the <span style="color:orange"><strong>Fire Effect</strong></span>, I’ve used the <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Time-Node.html">Time Node</a></strong> and <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Multiply-Node.html">Multiply</a></strong> it by a float to control the magnitude of the scrolling. To get the scrolling to move upwards I <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Negate-Node.html">Negate</a></strong> it, as the default <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Time-Node.html">Time</a></strong> output scrolls downwards, so the opposite is upwards. I then fed this into the Y input on a <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Vector-2-Node.html">Vector2 Node</a></strong>, leaving X as 0, which is used as the offset input for a <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Tiling-And-Offset-Node.html">Tiling And Offset Node</a></strong>, so the movement is only in the Y axis.</p>
+
+<p>Also I used a <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Property-Types.html">Vector2 Property</a></strong> to control the scaling of the tiling input, allowing the scale of the noise to changed in the <strong><a href="https://docs.unity3d.com/Manual/UsingTheInspector.html">Inspector</a></strong>. The output from our <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Tiling-And-Offset-Node.html">Tiling And Offset</a></strong> will then be put into a <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@7.1/manual/Simple-Noise-Node.html">Simple Noise Node</a></strong> and <strong><a href="https://docs.unity3d.com/Packages/com.unity.shadergraph@6.9/manual/Voronoi-Node.html">Voronoi Node</a></strong>.</p>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire2Graph1.gif" class="figure-img img-fluid rounded" alt="Add Caption" /><figcaption class="figure-caption text-center">Add Caption</figcaption></figure>
+
+<p>This noise is used later to offset the UVs to create fire like movement. Unlike offsetting by a constant value or time (which changes, but is the same value for every UV coordinate), we are shifting each UV coordinate by a different value, which produces a distortion (aka warping) effect. We also should Subtract 0.5, so the distortion is centered and doesn’t offset more in one direction than the other.</p>
+
+<p>Multiply this with a Vector1 property named Distortion Strength. We also want the top of the fire to be distorted more than the bottom, so we also Multiply with the Y axis of the UV (G output from Split). We put this result into the Y axis of a Vector2, then into the Offset input on a Tiling And Offset node to apply our distortion, only in the vertical direction.</p>
+
+<p>The distortion will mean our UVs could go outside of the 0-1 range, so parts of the texture/ellipse later could be cut-off by the size of the quad. To help fix this, we’ll also include a Vector1 property called Y Scale and put it into the Y of a Vector2, with X as 1, into the Tiling input. This will allow us to scale down the effect in the vertical direction, to try to keep the fire contained to the quad.</p>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire2Graph2.gif" class="figure-img img-fluid rounded" alt="Add Caption" /><figcaption class="figure-caption text-center">Add Caption</figcaption></figure>
+
+<p>While we could take our UVs and directly put them into an Ellipse node, I’d like to apply a bit more offset first, to warp it into a more tear-drop, or candle-flame like shape. There might be a few ways to achieve this, but I’m taking the Y axis (G output from a Split), using One Minus to flip it upside-down and putting the result into a Power node with a B value of 2. (I guess this could also just be a Multiply, not sure if the compiler is clever enough to optimise this automatically or not). The next One Minus flips the vertical component back, but since the ellipse is centered and symmetrical it shouldn’t really matter.</p>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire2Graph3.gif" class="figure-img img-fluid rounded" alt="Add Caption" /><figcaption class="figure-caption text-center">Add Caption</figcaption></figure>
+
+<p>With our edited UVs, we’ll put them into two Ellipse nodes. The first with a Width of 0.7 and Height of 0.5, and the other with 1 and 1.</p>
+
+<p>We’ll also take the output from the Power in the previous step, Add 0.3, Multiply by 1.5 and put the result into a Posterize with 3 Steps. These values were mostly trial and error to ensure the fire had a nice amount of coloured bands, to help with a more stylised look.</p>
+
+<p>This is added with the smaller Ellipse output, then we can tint the fire by multiplying with a Color property (which is also set to HDR mode and has an Intensity of 1.5) and plug the result into the Color input on the Unlit Master node. Be sure to also set the surface type to Transparent via the small cog on the node.</p>
+
+<p>The larger Ellipse is used as the Alpha input on the Master node if using Alpha blending. If you prefer Additive blending, Multiply this with the current colour result and use that as the Color input instead, as black areas will show as transparent.</p>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire2Graph4.gif" class="figure-img img-fluid rounded" alt="Add Caption" /><figcaption class="figure-caption text-center">Add Caption</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/StylizedFire2.gif" class="figure-img img-fluid rounded" alt="Add Caption" /><figcaption class="figure-caption text-center">Add Caption</figcaption></figure>
+
+<hr />
+
+<h3 id="textured"><strong>Textured</strong></h3>
+
+<hr />
+
+<p>lopers</p>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph1.png" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph2.gif" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph3.png" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph4.gif" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph5.gif" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<figure class="figure w-100">
+  <img src="/assets/StylizedFire/Fire1Graph6.gif" class="figure-img img-fluid rounded" alt="Placeholder" /><figcaption class="figure-caption text-center">Placeholder</figcaption></figure>
+
+<hr />
+
+<h3 id="pixel-rendered"><strong>Pixel Rendered</strong></h3>
+
+<hr />
+
+<p>lopers</p>
+
+</div>
+  </main>
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
+    by <strong>Sam Hedges</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:sam.hedges.sh@gmail.com"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/Sam-Hedges"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ffffff'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.instagram.com/samhedgesdev"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#C13584'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-instagram fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/sam-hedges-927476180"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitch.tv/samhedgesdev"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#6441a5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitch fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.twitter.com/Sam_Hedges_"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#1da1f2'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-1x"></i>
+    </a><a class="social mx-1"  href="https://www.reddit.com/user/RetainedStar64"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff4500'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-reddit fa-1x"></i>
+    </a>
+
+</div><small id="attribution">
+    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+</body>
+
+</html>
