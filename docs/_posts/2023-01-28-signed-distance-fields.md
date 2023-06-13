@@ -4,6 +4,7 @@ tags: [SDF, Graphics]
 style: fill
 color: light
 description: This post covers the impact that signed distance fields have on the world of graphics. I learn how they have changed the landscape of computer graphics affecting graphic design, typography, programming, and video games.
+external_url: https://www.google.com
 ---
 
 Introduction:
