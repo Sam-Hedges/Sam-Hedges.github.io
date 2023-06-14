@@ -1,5 +1,3 @@
-/// WIP ANIMATION ///
-
 const GLOBAL_CFG = {
     loop: true
 }
