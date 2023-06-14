@@ -5,7 +5,7 @@
   {% assign image = page.image | default: site.author.image %}
 
   {% if page.name and page.collection == 'projects' %}
-    {% assign title = page.name | escape %}
+  {% assign title = page.name | escape %}
   {% endif %}
 
   <meta charset="utf-8">
@@ -24,6 +24,9 @@
 
   <!-- Theme style -->
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+
+  <!-- Icon Animation-->
+  <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
