@@ -4,7 +4,6 @@ tags: [Computer Systems]
 style: fill
 color: warning
 description: In this post I explore the fascinating world of computer randomness and uncover how machines generate truly random numbers. From understanding the concept of randomness to exploring various algorithms and methods used by computers to generate randomness, I learn about the science of randomness and how it plays a crucial role in computer security, cryptography, and much more.
-external_url: https://sam-hedges.github.io/wip
 ---
 
 Introduction
