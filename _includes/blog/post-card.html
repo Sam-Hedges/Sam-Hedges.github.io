@@ -27,7 +27,7 @@
 
 <div class="col-lg-6 my-3 wow animated fadeIn {{ post.status == 'wip' ? 'work-in-progress' : '' }}"
   data-wow-delay=".15s">
-  <a href="{{ post_url }}" class="post card {{ card_style }}{% if post.status == 'wip' %} wip-card{% endif %}" {% if
+  <a href="{{ post_url }}" class="post card {{ card_style }} {% if post.status == 'wip' %} wip-card {% endif %}" {% if
     post.external_url and site.open_new_tab %} target="_blank" {% endif %}>
     target="_blank" {%- endif -%}>
     <div class="card-body {{ text_style }}">
