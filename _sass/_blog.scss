@@ -31,17 +31,13 @@ Tape Loader
 
 
 .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   position: absolute;
-  padding: 80px 0;
   background: rgba(0, 0, 0, 0.5);
-}
-
-.block-in {
-  width: 300px;
-  margin: 80px auto;
-  overflow: hidden;
 }
 
 .tape {
