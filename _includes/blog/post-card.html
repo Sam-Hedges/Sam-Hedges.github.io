@@ -47,12 +47,12 @@
     <div class="card-footer {{ text_style }}">
       {{ post.date | date_to_long_string }}
     </div>
-  </a>
-  {%- if post.status == 'wip' -%}
-  <div class="container-flex">
-    <div class="block">
-      <div class="tape"></div>
+    {%- if post.status == 'wip' -%}
+    <div class="container-flex">
+      <div class="block">
+        <div class="tape"></div>
+      </div>
     </div>
-  </div>
-  {%- endif -%}
+    {%- endif -%}
+  </a>
 </div>
