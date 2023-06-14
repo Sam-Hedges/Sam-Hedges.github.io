@@ -27,40 +27,38 @@
 
 <div class="col-lg-6 my-3 wow animated fadeIn {{ post.status == 'wip' ? 'work-in-progress' : '' }}"
   data-wow-delay=".15s">
-  <div class="{{ post.status == 'wip' ? 'wip-overlay' : '' }}">
-    <a href="{{ post_url }}" class="post card {{ card_style }}" {%- if post.external_url and site.open_new_tab -%}
-      target="_blank" {%- endif -%}>
-      <div class="card-body {{ text_style }}">
-        <h3 class="card-title">{{ post.title }}</h3>
-        <p class="card-text">
-          {% for tag in post.tags %}
-          <span class="badge {{ badge_style }}">{{ tag }}</span>
-          {% endfor %}
-        </p>
-        <p class="card-text">
-          {%- if post.description -%}
-          {{ post.description }}
-          {%- else -%}
-          {{ post.content | truncatewords: 25, "<small><i> read more...</i></small>" }}
-          {%- endif -%}
-        </p>
-      </div>
-      <div class="card-footer {{ text_style }}">
-        {{ post.date | date_to_long_string }}
-      </div>
-    </a>
-    {%- if post.status == 'wip' -%}
-    <div class="container-flex">
-      <div class="container">
-        <iconify-icon class="first-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
-          height="75"></iconify-icon>
-        <iconify-icon class="second-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
-          height="75"></iconify-icon>
-        <iconify-icon class="third-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
-          height="75"></iconify-icon>
-      </div>
+  <a href="{{ post_url }}" class="post card {{ card_style }}" {%- if post.external_url and site.open_new_tab -%}
+    target="_blank" {%- endif -%}>
+    <div class="card-body {{ text_style }}">
+      <h3 class="card-title">{{ post.title }}</h3>
+      <p class="card-text">
+        {% for tag in post.tags %}
+        <span class="badge {{ badge_style }}">{{ tag }}</span>
+        {% endfor %}
+      </p>
+      <p class="card-text">
+        {%- if post.description -%}
+        {{ post.description }}
+        {%- else -%}
+        {{ post.content | truncatewords: 25, "<small><i> read more...</i></small>" }}
+        {%- endif -%}
+      </p>
     </div>
-    {%- endif -%}
+    <div class="card-footer {{ text_style }}">
+      {{ post.date | date_to_long_string }}
+    </div>
+  </a>
+  {%- if post.status == 'wip' -%}
+  <div class="container-flex">
+    <div class="container">
+      <iconify-icon class="first-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
+        height="75"></iconify-icon>
+      <iconify-icon class="second-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
+        height="75"></iconify-icon>
+      <iconify-icon class="third-gear" icon="bi:gear-wide-connected" style="color: white;" width="75"
+        height="75"></iconify-icon>
+    </div>
   </div>
+  {%- endif -%}
 </div>
 <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
