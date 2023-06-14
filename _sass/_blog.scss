@@ -24,3 +24,67 @@
     color: white !important;
   }
 }
+
+.work-in-progress {
+  position: relative;
+  filter: grayscale(1);
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.first-gear {
+  position: absolute;
+  left: 15%;
+  top: 34%;
+  animation: spin 2s linear infinite;
+}
+
+.second-gear {
+  position: absolute;
+  left: 15%;
+  top: 56%;
+  animation: spin 2s linear infinite;
+}
+
+.third-gear {
+  position: absolute;
+  left: 29%;
+  top: 45%;
+  animation: spin-opposite 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-opposite {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
