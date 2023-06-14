@@ -45,21 +45,10 @@ Tape Loader
   /* Disable clicking on the gears */
 }
 
-.container {
+.block {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.block {
-  border-radius: $rounded-borders;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .tape {
