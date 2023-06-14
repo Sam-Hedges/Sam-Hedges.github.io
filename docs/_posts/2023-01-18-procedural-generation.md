@@ -4,6 +4,7 @@ tags: [Procedural]
 style: border
 color: light
 description: In this post I explore the exciting world of procedural generation in gaming. From the seemingly endless possibilities of randomly generated levels and environments, to the infinite replayability of games that utilize this technology, I delve into the impact of procedural generation on the gaming industry. 
+status: wip
 ---
 
 Introduction:

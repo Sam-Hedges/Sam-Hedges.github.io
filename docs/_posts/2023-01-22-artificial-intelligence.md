@@ -4,6 +4,7 @@ tags: [AI, Machine Learning]
 style: fill
 color: danger
 description: This post explores the impacts of the rapidly growing field of artificial intelligence (AI) and machine learning, in the world of games development. I look into the creation of algorithms that enhance the gaming experience and the creative and technical aspects involved in their design.
+status: wip
 ---
 
 Introduction
