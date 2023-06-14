@@ -1,13 +1,12 @@
 const GLOBAL_CFG = {
     loop: true
-};
-
-
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let swetCollection = document.querySelectorAll('.swet');
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+let swetCollection = document.querySelectorAll('.swet')
 
 swetCollection.forEach((el, index) => {
     anime({
@@ -18,11 +17,10 @@ swetCollection.forEach((el, index) => {
         duration: index * 1500,
         translateY: index * 2,
         easing: 'easeInOutSine'
-    });
+    })
+})
 
-});
-
-let spitCollection = document.querySelectorAll('.spit');
+let spitCollection = document.querySelectorAll('.spit')
 
 spitCollection.forEach((el, index) => {
     anime({
@@ -34,10 +32,9 @@ spitCollection.forEach((el, index) => {
         translateY: getRndInteger(-30, 30),
         translateX: getRndInteger(-30, 30),
         easing: 'easeInOutSine'
-    });
-
-});
-let debreCollection = document.querySelectorAll('.debre');
+    })
+})
+let debreCollection = document.querySelectorAll('.debre')
 
 debreCollection.forEach((el, index) => {
     anime({
@@ -51,24 +48,21 @@ debreCollection.forEach((el, index) => {
         translateY: getRndInteger(-10, -40),
         translateX: getRndInteger(-30, 30),
         easing: 'linear'
-    });
-
-});
+    })
+})
 
 const GEAR1 = anime({
     ...GLOBAL_CFG,
     targets: '#gear1 path',
     rotate: 360,
     easing: 'linear'
-});
-
+})
 const GEAR2 = anime({
     ...GLOBAL_CFG,
     targets: '#gear2 path',
     rotate: -360,
     easing: 'linear'
-});
-
+})
 const SHORT_ARROW = anime({
     ...GLOBAL_CFG,
     targets: '#shortArrow',
@@ -76,8 +70,7 @@ const SHORT_ARROW = anime({
     duration: 10000,
     easing: 'linear',
     transformOrigin: ['4px 25px 0', '6px 27px 0']
-});
-
+})
 const LONG_ARROW = anime({
     ...GLOBAL_CFG,
     targets: '#longArrow',
@@ -85,8 +78,7 @@ const LONG_ARROW = anime({
     duration: 800,
     easing: 'linear',
     transformOrigin: ['2px 32px 0', '10px 39px 0']
-});
-
+})
 const LEFT_HAND = anime({
     ...GLOBAL_CFG,
     targets: '#leftHand',
@@ -95,8 +87,7 @@ const LEFT_HAND = anime({
     direction: 'alternate',
     easing: 'easeInOutQuart',
     transformOrigin: ['2px 32px 0', '10px 39px 0']
-});
-
+})
 const LEFT_PALM = anime({
     ...GLOBAL_CFG,
     targets: '#leftPalm',
@@ -105,8 +96,7 @@ const LEFT_PALM = anime({
     direction: 'alternate',
     easing: 'easeInOutQuart',
     transformOrigin: ['2px 32px 0', '10px 39px 0']
-});
-
+})
 const RIGHT_HAND = anime({
     ...GLOBAL_CFG,
     targets: '#rightHand',
@@ -115,8 +105,7 @@ const RIGHT_HAND = anime({
     direction: 'alternate',
     easing: 'easeInOutBack',
     transformOrigin: ['280px 120px 0', '280px 120px 0']
-});
-
+})
 
 const RIGHT_PALM = anime({
     ...GLOBAL_CFG,
@@ -128,8 +117,7 @@ const RIGHT_PALM = anime({
     direction: 'alternate',
     easing: 'easeInOutBack',
     transformOrigin: ['30px 30px 0', '30px 30px 0']
-});
-
+})
 const PEN = anime({
     ...GLOBAL_CFG,
     targets: '#pen',
@@ -140,8 +128,7 @@ const PEN = anime({
     direction: 'alternate',
     easing: 'easeInOutBack',
     transformOrigin: ['30px 30px 0', '30px 30px 0']
-});
-
+})
 const MOUTH = anime({
     ...GLOBAL_CFG,
     targets: '#mounth',
@@ -152,8 +139,7 @@ const MOUTH = anime({
     direction: 'alternate',
     easing: 'easeInOutElastic',
     transformOrigin: ['30px 30px 0', '30px 30px 0']
-});
-
+})
 const TONGUE = anime({
     ...GLOBAL_CFG,
     targets: '#tongue',
@@ -164,8 +150,7 @@ const TONGUE = anime({
     direction: 'alternate',
     easing: 'easeInOutElastic',
     transformOrigin: ['30px 10px 0', '30px 10px 0']
-});
-
+})
 const HEAD = anime({
     ...GLOBAL_CFG,
     targets: '#head',
@@ -174,8 +159,7 @@ const HEAD = anime({
     direction: 'alternate',
     easing: 'easeInOutSine',
     transformOrigin: ['200px 200px 0', '200px 200px 0']
-});
-
+})
 const HAIR1 = anime({
     ...GLOBAL_CFG,
     targets: '#hair1',
@@ -184,8 +168,7 @@ const HAIR1 = anime({
     direction: 'alternate',
     easing: 'easeInOutSine',
     transformOrigin: ['200px 200px 0', '200px 200px 0']
-});
-
+})
 const HAIR2 = anime({
     ...GLOBAL_CFG,
     targets: '#hair2',
@@ -194,35 +177,31 @@ const HAIR2 = anime({
     direction: 'alternate',
     easing: 'easeInOutSine',
     transformOrigin: ['100px 180px 0', '100px 180px 0']
-});
-
+})
 const BRAW = anime({
     ...GLOBAL_CFG,
     targets: '#brows',
     rotate: -10,
     duration: 500,
     direction: 'alternate',
-    easing: 'easeInOutSine'
-});
-
+    easing: 'easeInOutSine',
+})
 const EYE1 = anime({
     ...GLOBAL_CFG,
     targets: '#leftEye',
     duration: 2000,
     scaleY: [.4],
     direction: 'alternate',
-    easing: 'easeInOutSine'
-});
-
+    easing: 'easeInOutSine',
+})
 const EYE2 = anime({
     ...GLOBAL_CFG,
     targets: '#rghtEye',
     duration: 2000,
     scaleY: [.6],
     direction: 'alternate',
-    easing: 'easeInOutSine'
-});
-
+    easing: 'easeInOutSine',
+})
 const FLASH1 = anime({
     ...GLOBAL_CFG,
     targets: '#flash1',
@@ -231,9 +210,8 @@ const FLASH1 = anime({
     scaleX: [.6],
     rotate: getRndInteger(-4, 4),
     opacity: [0, .7, 0],
-    easing: 'easeInOutSine'
-});
-
+    easing: 'easeInOutSine',
+})
 const FLASH2 = anime({
     ...GLOBAL_CFG,
     targets: '#flash2',
@@ -243,26 +221,23 @@ const FLASH2 = anime({
     scaleX: [.6],
     rotate: getRndInteger(-4, 4),
     opacity: [0, .7, 0],
-    easing: 'easeInOutSine'
-});
-
+    easing: 'easeInOutSine',
+})
 const FLASH3 = anime({
     ...GLOBAL_CFG,
     targets: '#whiteFlash1',
     duration: 1000,
     opacity: [0, 0, .9, .7, .7, 0],
-    easing: 'easeOutQuint'
-});
-
+    easing: 'easeOutQuint',
+})
 const FLASH4 = anime({
     ...GLOBAL_CFG,
     targets: '#whiteFlash2',
     duration: 900,
     delay: 200,
     opacity: [0, .6, 0],
-    easing: 'linear'
-});
-
+    easing: 'linear',
+})
 const PAPER = anime({
     ...GLOBAL_CFG,
     targets: '#paper1',
@@ -274,5 +249,5 @@ const PAPER = anime({
     translateY: [-200, -100],
     rotate: getRndInteger(-400, -100),
     opacity: [0.3, .7, 0],
-    easing: 'easeInOutSine'
-});
+    easing: 'easeInOutSine',
+})
