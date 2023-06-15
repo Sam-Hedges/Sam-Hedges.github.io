@@ -15,6 +15,35 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 
 ---
 
+# **Education**
+
+---
+
+## Cambridge Academy for Science and Technology (CAST) – (GCSE’s)
+- Maths – 6
+- English Language – 4
+- English Literature – 5
+- Biology – 8
+- Chemistry – 6
+- Physics – 6
+- Computer Science – 7
+- Geography – 5
+- Financial Education – B
+ 
+## Duke of York Award 
+- Silver
+
+## Cambridge Regional College – UAL Level 3 Extended Diploma
+- UAL Level 3 Extended Diploma in Creative Media Production & Technology – Distinction
+- *(A UAL Level 3 Extended Diploma is equivalent to 3 A levels)*
+
+## Anglia Ruskin University Cambridge – Currently Studying
+- BSc (Hons) Computer Games Technology – 2nd year student
+
+<p>&nbsp;</p>
+
+---
+
 # **Technical Skills**
 
 ---
@@ -46,6 +75,14 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 
 <p>&nbsp;</p>
 
+--- 
+
+# **Work History**
+
+---
+
+{% include about/timeline.html source=site.data.work-timeline %}
+
 ---
 
 # **Industry Experience**
@@ -55,14 +92,6 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 {% include about/timeline.html source=site.data.industry-timeline %}
 
 ---
-
-# **Work History**
-
----
-
-{% include about/timeline.html source=site.data.work-timeline %}
-
---- 
 
 # **Contact**
 
