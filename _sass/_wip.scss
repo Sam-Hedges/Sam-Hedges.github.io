@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 0);
+}
+
+
+/**************************************/
+/************* Face Animation ********/
+/*************************************/
+
+//Eye - Eyelid
+
+#eye-left,
+#eye-right {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  transform: scale(1);
+  animation: wink 4s infinite;
+  animation-timing-function: linear;
+}
+
+#eyelid-left,
+#eyelid-right {
+  transform: translateY(0px);
+  animation: moveEyelid 4s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moveEyelid {
+
+  0%,
+  20% {
+    transform: translateY(0px);
+  }
+
+  21%,
+  24% {
+    transform: translateY(1.5px);
+  }
+
+  25%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes wink {
+
+  0%,
+  20% {
+    transform: scale(1, 1);
+  }
+
+  21%,
+  24% {
+    transform: scale(1, 0.25);
+  }
+
+
+  25%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+}
+
+//Mouth - Eyebrow
+
+#eyebrow-right {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: rotateZ(0);
+  animation: moveEyebrow-right 6s infinite;
+  animation-timing-function: linear;
+}
+
+#eyebrow-left {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: rotateZ(0);
+  animation: moveEyebrow-left 6s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#mouth {
+  transform-origin: left;
+  transform-box: fill-box;
+  transform: rotateZ(0) translate(0);
+  animation: moveMouth 6s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes moveEyebrow-right {
+
+  0%,
+  69% {
+    transform: rotateZ(0);
+  }
+
+  70%,
+  90% {
+    transform: rotateZ(20deg)
+  }
+
+  91%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes moveEyebrow-left {
+
+  0%,
+  69% {
+    transform: rotateZ(0);
+  }
+
+  70%,
+  90% {
+    transform: rotateZ(-20deg)
+  }
+
+  91%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes moveMouth {
+
+  0%,
+  69% {
+    transform: rotateZ(0) translate(0);
+  }
+
+  70%,
+  90% {
+    transform: rotateZ(25deg) translate(-4px, -3px);
+  }
+
+  91%,
+  100% {
+    transform: rotateZ(0) translate(0);
+  }
+}
+
+/**************************************/
+/*************** Body ****************/
+/*************************************/
+
+//Arm Animation (Coding)
+
+#arm {
+  transform-origin: center;
+  transform-box: fill-box;
+  transform: rotateZ(0);
+  animation: moveArm 0.4s infinite alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes moveArm {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(2deg);
+  }
+}
+
+#foot {
+  transform-origin: bottom left;
+  transform-box: fill-box;
+  transform: rotateZ(0);
+  animation: moveFoot 3s infinite alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes moveFoot {
+
+  0%,
+  50% {
+    transform: rotateZ(0);
+  }
+
+  51%,
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  61%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+/**************************************/
+/*************** Computer ************/
+/*************************************/
+#power-led {
+  fill: #E8505B;
+  animation: powerledOn 1s infinite;
+}
+
+@keyframes powerledOn {
+
+  0%,
+  30% {
+    fill: #E8505B;
+  }
+
+  31%,
+  60% {
+    fill: #e73e49;
+  }
+
+  61%,
+  100% {
+    fill: #E8505B;
+  }
+}
+
+#screen {
+  animation: moveUp 10s infinite;
+
+}
+
+@keyframes moveUp {
+  @for $i from 0 to 11 {
+
+    #{$i * 10%} {
+      transform: translateY(calc(#{$i} * -15.5px));
+    }
+
+  }
+}
+
+/**************************************/
+/*************** Decorators ************/
+/*************************************/
+
+#decorator_php,
+#decorator_html,
+#decorator_js,
+#decorator_css,
+#decorator_code,
+#decorator_small_site,
+#website {
+  opacity: 0;
+}
+
+#decorator_code {
+  animation: show 1s ease-in 2s forwards;
+}
+
+#decorator_js {
+  animation: show 2s ease-in 3s forwards;
+}
+
+#decorator_small_site {
+  animation: show 2s ease-in 6s forwards;
+}
+
+#decorator_html {
+  animation: show 1s ease-in 4s forwards;
+}
+
+#decorator_php {
+  animation: show 2s ease-in 5s forwards;
+}
+
+#website {
+  animation: show 1s ease-in 7.5s forwards;
+}
+
+#decorator_css {
+  animation: show 1s ease-in 6.5s forwards;
+}
+
+//website animation programming
+#main {
+  transform: translateX(-100px);
+  animation: moveWesbiteX1 0.4s ease-in 9s forwards;
+
+}
+
+#rect1 {
+  transform: translateX(-100px);
+  animation: moveWesbiteX1 0.4s ease-in 10s forwards;
+}
+
+#rect2 {
+  transform: translateY(100px);
+  animation: moveWesbiteY 0.4s ease-in 11s forwards;
+}
+
+#rect3 {
+  transform: translateY(100px);
+  animation: moveWesbiteY 0.4s ease-in 12s forwards;
+}
+
+#rect4 {
+  transform: translateX(100px);
+  animation: moveWesbiteX2 0.4s ease-in 13s forwards;
+}
+
+@keyframes moveWesbiteX1 {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveWesbiteX2 {
+  from {
+    transform: translateX(100px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveWesbiteY {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

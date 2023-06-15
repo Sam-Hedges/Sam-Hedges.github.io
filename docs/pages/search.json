@@ -3,13 +3,20 @@ layout: null
 permalink: /search.json
 ---
 [
+  {% assign postsArray = "" | split: "%," %}
   {% for post in site.posts %}
-    {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ post.external_url | default: post.url | relative_url }}",
-      "date"     : "{{ post.date }}"
-    } {% unless forloop.last %},{% endunless %}
+    {% if post.status != "wip" %}
+      {% capture postItem %}
+        {
+          "title"    : "{{ post.title | escape }}",
+          "category" : "{{ post.category }}",
+          "tags"     : "{{ post.tags | join: ', ' }}",
+          "url"      : "{{ post.external_url | default: post.url | relative_url }}",
+          "date"     : "{{ post.date }}"
+        }
+      {% endcapture %}
+      {% assign postsArray = postsArray | push: postItem %}
+    {% endif %}
   {% endfor %}
+  {{ postsArray | join: "," }}
 ]
