@@ -7,7 +7,7 @@ description: In this project I recreated a toon style fire effect inspired by Te
 ---
 
 # **🔥 Stylized Fire 🔥**
-
+<!--
 ---
 
 {% capture list_items %}
@@ -16,7 +16,7 @@ Textured
 Pixel Rendered
 {% endcapture %}
 {% include elements/list.html type="toc" %}
-
+-->
 ---
 
 Common methods of producing <span style="color:orange">**Fire VFX**</span> in **Unity**, is to use a **Particle System** or **VFX Graph**, however the many transparent quads used for each particle can create unnecessary overdraw which negatively affects performance, especially for mobile platforms.
@@ -35,7 +35,7 @@ A different technique that mitigates this issue is to offset a single quad's UVs
 
 To generate the required motion for the Fire Effect, I utilized the Time value and enhanced its impact through multiplication with a floating-point number. I reversed this value to make the texture scroll upwards as by default, the Time output causes downward scrolling. This value is then employed as the Y component of a Vector2 (keeping the X component at 0) and used as the offset in the Tiling And Offset Node. To adjust the scale of the tiling, a Vector2 Property is used, allowing alteration of the noise scale in the Inspector. The scrolling UVs from the Tiling And Offset are then applied as the UV input for a Simple Noise Node and Voronoi Node.
 
-{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph1.gif" caption="Add Caption" %}
+{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph1.gif" %}
 
 This noise will later serve to offset the UVs, creating fire-like motion. Instead of constant or time-based offset (which, while varying, is equal for all UV coordinates), we shift each UV coordinate differently, resulting in a warping effect. To center the distortion, we subtract 0.5, preventing unequal offset in any direction.
 
@@ -43,11 +43,11 @@ We then multiply this with a Vector1 property called Distortion Strength. To ach
 
 Given the distortion, our UVs might exceed the 0-1 range, potentially leading to sections of the texture/ellipse being clipped due to the quad's size. To rectify this, we introduce a Vector1 property, Y Scale, and assign it to the Y of a Vector2 (X being 1), and then to the Tiling input. This lets us scale down the effect vertically, ensuring the fire fits within the quad.
 
-{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph2.gif" caption="Add Caption" %}
+{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph2.gif" %}
 
 Rather than directly inputting our UVs into an Ellipse node, I decided to apply additional offset to create a more teardrop or candle-flame-like shape. I accomplished this by using the Y axis (G output from a Split), inverting it with One Minus, and processing the result in a Power node with a B value of 2. A subsequent One Minus operation flips the vertical component back, but it should not make a difference given the ellipse's symmetry and centeredness.
 
-{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph3.gif" caption="Add Caption" %}
+{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph3.gif" %}
 
 Once we modify the UVs, we feed them into two Ellipse nodes, the first with a width of 0.7 and height of 0.5, and the second with both dimensions being 1.
 
@@ -57,10 +57,12 @@ This output is combined with the smaller Ellipse output. We then colorize the fi
 
 For Alpha blending, the larger Ellipse serves as the Alpha input on the Master node. For Additive blending, multiply this with the existing color output and use the result as the Color input, rendering black areas transparent.
 
-{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph4.gif" caption="Add Caption" %}
+{% include elements/figure.html image="../assets/StylizedFire/Fire2Graph4.gif" %}
 
-{% include elements/figure.html image="../assets/StylizedFire/StylizedFire2.gif" caption="Add Caption" %}
+{% include elements/figure.html image="../assets/StylizedFire/StylizedFire2.gif" caption="Final Fire Shader" %}
 
+
+<!--
 ---
 
 ### **Textured**
@@ -86,4 +88,4 @@ lopers
 ### **Pixel Rendered**
 
 ---
-
+-->
