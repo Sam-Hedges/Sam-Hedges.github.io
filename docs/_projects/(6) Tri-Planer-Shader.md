@@ -1,7 +1,7 @@
 ---
 name: Tri-Planer Shader
-tags: [HLSL]
-tools: [HLSL]
+tags: [Unity, Mobile, HLSL]
+tools: [Unity, Mobile, HLSL]
 image: ../assets/TriPlanerShader/TriPlaner.png
 description: A commissioned shader made for an Indie Developer
 ---

@@ -3,7 +3,7 @@ name: Basketball Demo
 tags: [Unity]
 tools: [Unity]
 image: ../assets/Basketball/Court.png
-description: A custom shader made for a college project
+description: A Universtiy Unity Project demonstrating physics
 ---
 
 # **Tri-Planer Shader**

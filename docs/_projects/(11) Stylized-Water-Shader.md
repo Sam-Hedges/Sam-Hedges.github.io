@@ -3,7 +3,7 @@ name: Stylized Water Shader
 tags: [Unity]
 tools: [Unity]
 image: ../assets/WaterShader/Water.gif
-description: A custom shader made for a college project
+description: A custom water shader made for a university project
 ---
 
 # **Tri-Planer Shader**
