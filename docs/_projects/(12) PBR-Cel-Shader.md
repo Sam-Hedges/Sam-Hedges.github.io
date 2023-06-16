@@ -1,5 +1,5 @@
 ---
-name: PBR-Cel-Shader
+name: PBR Cel-Shader
 tags: [Unity]
 tools: [Unity]
 image: ../assets/CelShader/Shader.gif
