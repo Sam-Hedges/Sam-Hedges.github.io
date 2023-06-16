@@ -6,8 +6,50 @@ image: ../assets/CharacterRigging/Pigeon.gif
 description: A collection of all the rigged characters that I've worked on or created
 ---
 
-# **Tri-Planer Shader**
+# **RPG Character**
 
 ---
 
-Project Name: Wing It
+<video width="100%" muted autoplay controls>
+    <source src="../assets/CharacterRigging/Dummy.mp4" type="video/mp4">
+</video>
+
+---
+
+# **Red Riding Hood**
+
+---
+
+<video width="100%" muted autoplay controls>
+    <source src="../assets/CharacterRigging/RRH.mp4" type="video/mp4">
+</video>
+
+---
+
+# **The Big Bad Wolf**
+
+---
+
+<video width="100%" muted autoplay controls>
+    <source src="../assets/CharacterRigging/Wolf.mp4" type="video/mp4">
+</video>
+
+---
+
+# **Pigeon**
+
+---
+
+<video width="100%" muted autoplay controls>
+    <source src="../assets/CharacterRigging/Pigeon.mp4" type="video/mp4">
+</video>
+
+---
+
+# **Fire Wisp**
+
+---
+
+<video width="100%" muted autoplay controls>
+    <source src="../assets/CharacterRigging/FireWisp.mp4" type="video/mp4">
+</video>
