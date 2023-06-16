@@ -1,5 +1,5 @@
 ---
-name: Procedural Animation
+name: Procedural Animation 🚧
 tags: [C#, Curve Graphs, Animation Rigging, Inverse Kinematics]
 tools: [C#, Curve Graphs, Animation Rigging, Inverse Kinematics]
 image: ../assets/ProceduralAnimation/ProceduralAnimation.png
