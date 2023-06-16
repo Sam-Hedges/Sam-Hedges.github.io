@@ -53,11 +53,13 @@ Once we modify the UVs, we feed them into two Ellipse nodes, the first with a wi
 
 We also process the output from the Power in the previous step by adding 0.3, multiplying by 1.5, and passing the result into a Posterize node with 3 steps. These values were mostly arrived at through experimentation to ensure the fire exhibits attractive colored bands for a more stylized appearance.
 
-This output is combined with the smaller Ellipse output. We then colorize the fire by multiplying with a Color property (set to HDR mode with an intensity of 1.5), and connect the result to the Color input on the Unlit Master node. The surface type should also be set to Transparent using the node's small cog.
+This output is combined with the smaller Ellipse output. We then colorize the fire by multiplying with a Color property (set to HDR mode with an intensity of 1.5), and connect the result to the Color input on the Unlit Master node. The surface type should also be set to Transparent in the node's settings.
 
 For Alpha blending, the larger Ellipse serves as the Alpha input on the Master node. For Additive blending, multiply this with the existing color output and use the result as the Color input, rendering black areas transparent.
 
 {% include elements/figure.html image="../assets/StylizedFire/Fire2Graph4.gif" %}
+
+This method is an excellent demonstration of the power of Unity Shadergraph and the versatility it provides to the developers in terms of creativity and optimization. This was an excellent learning opportunity for me to get more experience using the Unity Shadergraph and to learn more about what goes into making different effects. It is fascinating to me how with a few basic elements, combined in unique ways, you can achieve all sorts of visual outcomes. The applications of this method extend beyond just fire, and with some adjustments, it can be used for creating various other effects as well, thereby becoming a valuable tool in my VFX toolkit.
 
 {% include elements/figure.html image="../assets/StylizedFire/StylizedFire2.gif" caption="Final Fire Shader" %}
 
