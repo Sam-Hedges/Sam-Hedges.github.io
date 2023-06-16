@@ -4,6 +4,7 @@ tags: [C#, Curve Graphs, Animation Rigging, Inverse Kinematics]
 tools: [C#, Curve Graphs, Animation Rigging, Inverse Kinematics]
 image: ../assets/ProceduralAnimation/ProceduralAnimation.png
 description: In this project I created a procdural animation system that can be applied to rigged quadrupedal characters
+external_url: https://sam-hedges.github.io/projects/
 ---
 
 # **Procedural Animation**

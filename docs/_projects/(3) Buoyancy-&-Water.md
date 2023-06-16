@@ -4,6 +4,7 @@ tags: [C#, Mesh Generation, Shadergraph, Physics]
 tools: [C#, Mesh Generation, Shadergraph, Physics]
 image: ../assets/WaterAndBuoyancy/Water.gif
 description: In this project I created a water system in conjuction with a buoyancy effect for unity rigidbodies
+external_url: https://sam-hedges.github.io/projects/
 ---
 
 # **Buoyancy & Water**
