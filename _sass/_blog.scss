@@ -174,7 +174,7 @@ Tape Loader
   /* -9px * 0.3 */
   top: 0;
   bottom: 0;
-  transform: rotate(0deg) scale(.12);
+  transform: rotate(0deg) scale(.4);
   /* scale(.4) * 0.3 */
   animation: tapeIcon 4s linear infinite;
 }
@@ -195,12 +195,12 @@ Tape Loader
 
 @keyframes tapeIcon {
   0% {
-    transform: rotate(0deg) scale(.12);
+    transform: rotate(0deg) scale(.4);
     /* scale(.4) * 0.3 */
   }
 
   100% {
-    transform: rotate(-360deg) scale(.12);
+    transform: rotate(-360deg) scale(.4);
     /* scale(.4) * 0.3 */
   }
 }
