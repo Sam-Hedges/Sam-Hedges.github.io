@@ -52,6 +52,19 @@ Tape Loader
   height: 100%;
 }
 
+.icon {
+  position: absolute;
+  top: 1%;
+  /* Adjust these values as needed */
+  right: 1%;
+  width: 15%;
+  /* Control the size of the icon */
+  height: 15%;
+  padding: 5%;
+  /* Control the padding of the icon */
+  /* Any other styles for the icon */
+}
+
 .tape {
   margin: 120px auto;
   width: 100px;
