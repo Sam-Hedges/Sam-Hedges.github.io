@@ -162,35 +162,46 @@ Tape Loader
 .tapeIcon:before {
   content: "";
   border-radius: 100%;
-  width: 38px;
-  height: 38px;
+  width: 11.4px;
+  /* 38px * 0.3 */
+  height: 11.4px;
+  /* 38px * 0.3 */
   display: block;
   position: absolute;
-  border: 5px dashed #fff;
-  margin: -9px auto;
+  border: 1.5px dashed #fff;
+  /* 5px * 0.3 */
+  margin: -2.7px auto;
+  /* -9px * 0.3 */
   top: 0;
   bottom: 0;
-  transform: rotate(0deg) scale(.4);
+  transform: rotate(0deg) scale(.12);
+  /* scale(.4) * 0.3 */
   animation: tapeIcon 4s linear infinite;
 }
 
 .tapeIcon:after {
-  left: -10px;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 65px #000;
+  left: -3px;
+  /* -10px * 0.3 */
+  box-shadow: 0 0 0 1.2px #fff, 0 0 0 19.5px #000;
+  /* 4px * 0.3, 65px * 0.3 */
 }
 
 .tapeIcon:before {
-  right: -10px;
-  box-shadow: 0 0 0 4px #fff, 0 0 0 35px #000;
+  right: -3px;
+  /* -10px * 0.3 */
+  box-shadow: 0 0 0 1.2px #fff, 0 0 0 10.5px #000;
+  /* 4px * 0.3, 35px * 0.3 */
 }
 
 @keyframes tapeIcon {
   0% {
-    transform: rotate(0deg) scale(.4);
+    transform: rotate(0deg) scale(.12);
+    /* scale(.4) * 0.3 */
   }
 
   100% {
-    transform: rotate(-360deg) scale(.4);
+    transform: rotate(-360deg) scale(.12);
+    /* scale(.4) * 0.3 */
   }
 }
 
