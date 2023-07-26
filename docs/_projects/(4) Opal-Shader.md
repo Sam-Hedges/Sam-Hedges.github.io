@@ -277,3 +277,6 @@ The Fragment function is where the magic happens. It starts by setting up the UV
 ## **Conclusion**
 
 The creation of the opal fluid shader was a fascinating exercise in manipulating and controlling light and colour within a game engine. It was crucial to keep performance in mind while also striving for the highest visual fidelity. Despite the complexity involved, the result was a visually appealing, dynamic, and performant shader that accurately represents an opal fluid filling a gauge bar. The inclusion of shader properties allowed the design team to manipulate the shader's appearance in real-time, contributing to an efficient workflow and a visually consistent final product.
+
+
+{% include elements/figure.html image="../assets/Opal/Opal.gif" caption="Final Opal Shader" %}
