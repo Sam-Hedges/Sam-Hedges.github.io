@@ -19,7 +19,6 @@ Welcome to the repository for my personal portfolio website. This site is a show
 - [Blog](https://sam-hedges.github.io/blog/): My thoughts and writings on various topics related to technology and programming.
 - [Career](https://sam-hedges.github.io/career/): An overview of my career aspirations and educational background.
 - [Resume](https://sam-hedges.github.io/assets/CV/CV-Sam-Hedges.pdf): My current resume detailing my skills and experiences.
-- [GitHub](https://github.com/Sam-Hedges): My GitHub profile, where you can see my contributions and repositories.
 
 ## Setup
 
@@ -39,6 +38,7 @@ Contributions are welcome! Please feel free to submit a pull request or create a
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Sam-Hedges/Sam-Hedges.github.io/blob/master/LICENSE) file for details.
 
 ---
+
 <div align="center">
   <i>A custom site utilising <a href="https://github.com/jekyll/jekyll">Jekyll</a> to display my portfolio.</i>
   <i>Hosted via Github Pages.</i>
