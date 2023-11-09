@@ -14,15 +14,99 @@ Cel-shading, or toon shading within creative media, is a rendering concept appli
 
 Following standard techniques with game engines, cels are instantiated from the lighting of a diffuse model, traditionally Lambertian Reflectance; calculated as the dot product of the surface normal vector, and the inverse of the light direction vector. The inverse of the light direction is used to ensure that the sign of the values is ordered correctly, otherwise, the lighting would be reversed with the shadow side facing the light source. This model for lighting functions, as the outcome of the two vectors, equals 1 or -1 when they are parallel depending on the sign of the vectors as scalar multiples, and 0 when they are perpendicular. This value determines the brightness of the surface, -1 to 0 being in shadow and 0 to 1 being illuminated.
 
+```hlsl
+float4 CalculateDiffuseLighting(float3 normal, float3 lightDir)
+{
+    float NdotL = max(dot(normal, -lightDir), 0.0);
+    return float4(NdotL, NdotL, NdotL, 1.0); // Return grayscale value for lighting
+}
+```
+
 At the moment, we've only determined the diffuse lighting where brightness is an even gradient from -1 to 1. To reveal the cels that we're after, we could use several methods to achieve similar outcomes, but they all invariably rely on the same basic principles. Thresholds are set to squeeze values together, the most basic example being all values below 0 being set to -1 and all values above being set to 1, resulting in single-step shading with only shadow and light being represented. However, this doesn't have to be limited to one step; depending on where along the imaginary number line of -1 to 1 you decide to set thresholds, multiple steps can be created. This gives precise control of where shading boundaries exist and allows for many different styles to be achieved depending on how you define the lighting.
+
+```hlsl
+float4 ApplyThreshold(float4 diffuse, float threshold)
+{
+    float brightness = diffuse.r; // Assuming a grayscale input for brightness
+    // Apply threshold
+    if(brightness < threshold)
+        brightness = 0.0; // Shadow
+    else
+        brightness = 1.0; // Light
+
+    return float4(brightness, brightness, brightness, diffuse.a);
+}
+
+float4 ApplyMultiStepThreshold(float4 diffuse, float2 thresholds)
+{
+    float brightness = diffuse.r;
+    // Define three levels: shadow, mid-tone, and light
+    if(brightness < thresholds.x)
+        brightness = 0.33; // Shadow
+    else if(brightness < thresholds.y)
+        brightness = 0.66; // Mid-tone
+    else
+        brightness = 1.0; // Light
+
+    return float4(brightness, brightness, brightness, diffuse.a);
+}
+```
 
 {% include elements/figure.html image="../assets/CelShadingArticle/ToonShaderAnimation.gif" caption="Example Of Cel-Shaded Geometry" %}
 
 My preferred method for implementing these thresholds lies within textures, made more popular by modern visual node-shader tools such as Unity’s Shadergraph. A “ramp texture” is a 1D gradient texture that maps an input scalar value to an output colour value. The texture is sampled along its single axis, based on the Lambertian lighting input to define the transition between lit and shadowed areas of an object. This allows finer control over the placement of shadow bands, their size, their strength, and how harsh the shading is between each band, in an easier-to-visualise format. With modern engine tools, including built-in gradient editor functions, it's easy to see, removed from the context of specific assets, how the lighting is applied.
 
+```hlsl
+Texture1D _RampTexture;
+sampler _RampSampler = sampler_state{Texture = <_RampTexture>;};
+
+float4 SampleRampTexture(float4 diffuse)
+{
+    float brightness = diffuse.r; // Use red channel for grayscale brightness
+    float rampValue = tex1D(_RampSampler, brightness).r; // Sample the ramp texture
+    return float4(rampValue, rampValue, rampValue, 1.0); // Return as grayscale
+}
+```
+
 This simple concept can be applied to every aspect of lighting within PBR principles depending on how "realistic" the desired outcome has to be. Often mixing and matching elements of realism within cel-shading can make it feel more grounded to audiences, as optical phenomena people are used to seeing can reinforce their immersion. For instance, while the shadows in a cel-shaded scene might be presented in stark, crisp steps to mimic the style of a comic illustration, reflections and refractions of light can be rendered in a more conventional manner to add a sense of depth and realism. Including more lifelike elements such as light bounce, subsurface scattering and ambient occlusion helps bridge the gap between a flat, two-dimensional aesthetic and the familiar, tangible quality of the real world. This can be most commonly seen in modern films by studios such as Disney, Pixar and Dreamworks, all of which leverage these concepts in their feature animated films.
 
 At its core, cel-shading is about abstracting the complex, continuous nuances of real-world light and shadow into a discrete, easily readable set of visual cues. Its simple aesthetic is deceptive, though, as achieving a compelling, balanced cel-shaded scene requires a keen understanding of both art and technology. While cel-shading can often be seen as a 'stylised' choice, it is nonetheless as nuanced and complex as any other rendering method in its own right. Cel-shading continues to be a compelling choice for artists and creators looking to strike a balance between two-dimensional artistry and three-dimensional realism. As technology evolves and the boundaries of visual rendering continue to be pushed, it will be exciting to see where cel-shading might venture next, and what new possibilities it might bring to the world of digital art and storytelling.
+
+```hlsl
+// Inputs and samplers
+Texture1D _RampTexture;
+sampler _RampSampler = sampler_state{Texture = <_RampTexture>;};
+float4 _LightDir; // Should be set to the inverse of light direction
+
+// Vertex to fragment shader structure
+struct v2f
+{
+    float3 normal : NORMAL;
+    float4 pos : SV_POSITION;
+};
+
+// Vertex shader
+v2f vert(appdata_full v)
+{
+    v2f o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.normal = v.normal;
+    return o;
+}
+
+// Fragment shader
+float4 frag(v2f i) : SV_Target
+{
+    // Calculate Lambertian reflectance
+    float NdotL = max(dot(i.normal, _LightDir.xyz), 0.0);
+    
+    // Sample the ramp texture to apply cel shading
+    float rampValue = tex1D(_RampSampler, NdotL).r;
+    
+    // Output the shaded color
+    return float4(rampValue, rampValue, rampValue, 1.0);
+}
+```
 
 ---
 
