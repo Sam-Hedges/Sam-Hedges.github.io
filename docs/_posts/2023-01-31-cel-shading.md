@@ -14,6 +14,8 @@ Cel-shading, or toon shading within creative media, is a rendering concept appli
 
 Following standard techniques with game engines, cels are instantiated from the lighting of a diffuse model, traditionally Lambertian Reflectance; calculated as the dot product of the surface normal vector, and the inverse of the light direction vector. The inverse of the light direction is used to ensure that the sign of the values is ordered correctly, otherwise, the lighting would be reversed with the shadow side facing the light source. This model for lighting functions, as the outcome of the two vectors, equals 1 or -1 when they are parallel depending on the sign of the vectors as scalar multiples, and 0 when they are perpendicular. This value determines the brightness of the surface, -1 to 0 being in shadow and 0 to 1 being illuminated.
 
+> ***Lambertian Reflectance Model for Diffuse Lighting***
+
 ```hlsl
 float4 CalculateDiffuseLighting(float3 normal, float3 lightDir)
 {
@@ -23,6 +25,8 @@ float4 CalculateDiffuseLighting(float3 normal, float3 lightDir)
 ```
 
 At the moment, we've only determined the diffuse lighting where brightness is an even gradient from -1 to 1. To reveal the cels that we're after, we could use several methods to achieve similar outcomes, but they all invariably rely on the same basic principles. Thresholds are set to squeeze values together, the most basic example being all values below 0 being set to -1 and all values above being set to 1, resulting in single-step shading with only shadow and light being represented. However, this doesn't have to be limited to one step; depending on where along the imaginary number line of -1 to 1 you decide to set thresholds, multiple steps can be created. This gives precise control of where shading boundaries exist and allows for many different styles to be achieved depending on how you define the lighting.
+
+> ***Basic Cel Shading with Hard and Multi Thresholds***
 
 ```hlsl
 float4 ApplyThreshold(float4 diffuse, float threshold)
@@ -52,9 +56,9 @@ float4 ApplyMultiStepThreshold(float4 diffuse, float2 thresholds)
 }
 ```
 
-{% include elements/figure.html image="../assets/CelShadingArticle/ToonShaderAnimation.gif" caption="Example Of Cel-Shaded Geometry" %}
-
 My preferred method for implementing these thresholds lies within textures, made more popular by modern visual node-shader tools such as Unity’s Shadergraph. A “ramp texture” is a 1D gradient texture that maps an input scalar value to an output colour value. The texture is sampled along its single axis, based on the Lambertian lighting input to define the transition between lit and shadowed areas of an object. This allows finer control over the placement of shadow bands, their size, their strength, and how harsh the shading is between each band, in an easier-to-visualise format. With modern engine tools, including built-in gradient editor functions, it's easy to see, removed from the context of specific assets, how the lighting is applied.
+
+> ***Ramp Texture for Cel Shading***
 
 ```hlsl
 Texture1D _RampTexture;
@@ -71,6 +75,8 @@ float4 SampleRampTexture(float4 diffuse)
 This simple concept can be applied to every aspect of lighting within PBR principles depending on how "realistic" the desired outcome has to be. Often mixing and matching elements of realism within cel-shading can make it feel more grounded to audiences, as optical phenomena people are used to seeing can reinforce their immersion. For instance, while the shadows in a cel-shaded scene might be presented in stark, crisp steps to mimic the style of a comic illustration, reflections and refractions of light can be rendered in a more conventional manner to add a sense of depth and realism. Including more lifelike elements such as light bounce, subsurface scattering and ambient occlusion helps bridge the gap between a flat, two-dimensional aesthetic and the familiar, tangible quality of the real world. This can be most commonly seen in modern films by studios such as Disney, Pixar and Dreamworks, all of which leverage these concepts in their feature animated films.
 
 At its core, cel-shading is about abstracting the complex, continuous nuances of real-world light and shadow into a discrete, easily readable set of visual cues. Its simple aesthetic is deceptive, though, as achieving a compelling, balanced cel-shaded scene requires a keen understanding of both art and technology. While cel-shading can often be seen as a 'stylised' choice, it is nonetheless as nuanced and complex as any other rendering method in its own right. Cel-shading continues to be a compelling choice for artists and creators looking to strike a balance between two-dimensional artistry and three-dimensional realism. As technology evolves and the boundaries of visual rendering continue to be pushed, it will be exciting to see where cel-shading might venture next, and what new possibilities it might bring to the world of digital art and storytelling.
+
+> ***Complete Shader Snippet***
 
 ```hlsl
 // Inputs and samplers
@@ -108,6 +114,8 @@ float4 frag(v2f i) : SV_Target
 }
 ```
 
+{% include elements/figure.html image="../assets/CelShadingArticle/ToonShaderAnimation.gif" caption="Example Of Cel-Shaded Geometry" %}
+
 ---
 
 ## History of Cel-Shading
@@ -142,6 +150,22 @@ In the following years, cel shading became more popular in video games, with sev
 
 The half-tone effect is a technique used to give a classic, pop comic book-like appearance to shadows. It works by breaking down the shading of an object into a series of dots of varying sizes and darkness, simulating the look of traditional half-tone printing. To implement this effect, you can use a threshold function that maps the shading of the object to an arrangement of dots created using Voronoi noise. The threshold value can be determined by the surface normal of the object, its surface colour, or a custom lighting calculation. By adjusting the threshold and dot size, you can achieve a range of different styles, from bold and graphic to more subtle and nuanced.
 
+```hlsl
+// Assuming we have a function to generate Voronoi noise.
+// The function 'Voronoi' should return a value based on the input UVs that mimics the Voronoi pattern.
+
+float4 CalcHalfTone(float2 uv, float3 normal, float4 color)
+{
+    float shade = dot(normal, _WorldSpaceLightPos0.xyz); // Simple diffuse shading
+    shade = saturate(shade); // Keep it in [0,1] range
+
+    float pattern = Voronoi(uv); // Your Voronoi noise function
+
+    // Apply the halftone pattern based on the shade
+    return shade < pattern ? float4(0, 0, 0, 1) : color;
+}
+```
+
 ---
 
 ### Cross-hatching
@@ -149,6 +173,24 @@ The half-tone effect is a technique used to give a classic, pop comic book-like 
 {% include elements/figure.html image="../assets/CelShadingArticle/CrossHatchAnimation.gif" caption="Cross-Hatching effect by https://www.artstation.com/bryankaelin" %}
 
 Cross-hatching is a technique used in cel-shading to achieve a hand-shaded look to shadows. It involves creating a texture map of intersecting lines that are evenly spaced and vary in intensity and thickness, meant to mimic the pencil marks of shading in a traditional illustration. The lines are added to the surface of the 3D model in a perpendicular pattern to define shading and depth, making the object appear 2D and flat. The denser the lines, the darker the shading will be, and the thicker the lines, the greater the depth perception. The cross-hatching lines in the lighted areas will be lighter, while those in the shadowed areas will be darker.
+
+```hlsl
+// Cross-hatching texture with transparency where the lines are
+sampler2D _CrossHatchTex;
+float _CrossHatchThreshold;
+
+float4 CalcCrossHatching(float2 uv, float3 normal, float4 color)
+{
+    float luminance = dot(normalize(normal), _WorldSpaceLightPos0.xyz);
+    luminance = saturate(luminance); // Keep it in [0,1] range
+
+    // Sample the cross-hatching texture
+    float4 hatch = tex2D(_CrossHatchTex, uv);
+
+    // Apply the cross-hatching effect based on light intensity
+    return lerp(hatch * color, color, step(_CrossHatchThreshold, luminance));
+}
+```
 
 ---
 
@@ -158,6 +200,20 @@ Cross-hatching is a technique used in cel-shading to achieve a hand-shaded look 
 
 Rim lighting, also known as backlighting or edge lighting, is a visual effect used in computer graphics and video games to add depth and enhance the overall look of an object. In cel-shading, rim lighting is a common technique used to create a cartoon-like appearance by separating the object from the background. First, you calculate the angle between the surface normal of the object and the light source. If the angle is greater than a certain threshold, fresnel shading is used to create the highlight. This calculates the reflection of light on the surface of the object, taking into account the angle between the surface normal and the view direction. The brighter the reflection, the brighter the highlight. The rim light can be further modified by adjusting the brightness and colour of the light source, as well as the intensity and size of the rim light effect.
 
+```hlsl
+// Rim lighting properties
+float _RimPower;
+float4 _RimColor;
+
+float4 CalcRimLighting(float3 normal, float3 viewDir)
+{
+    float rim = 1.0 - saturate(dot(normal, viewDir)); // Fresnel equation
+    rim = pow(rim, _RimPower); // Control the falloff
+
+    return _RimColor * rim; // Apply the rim color
+}
+```
+
 ---
 
 ### Hull Outlines
@@ -165,6 +221,21 @@ Rim lighting, also known as backlighting or edge lighting, is a visual effect us
 {% include elements/figure.html image="../assets/CelShadingArticle/HullOutlineAnimation.gif" caption="Hull Outline effect from https://torchinsky.me/cel-shading/" %}
 
 This technique is used to generate an outline around objects in 3D graphics. It works by creating a convex hull around an object's silhouette and extruding it to create a thick outline. The convex hull is created by adding additional vertices to the silhouette until all the internal angles are less than 180 degrees. The resulting shape is then rendered using a stroke width to create a visible outline.
+
+```hlsl
+// This effect is usually done in the vertex shader by extruding vertices along their normals.
+// Here's a conceptual snippet:
+
+v2f vert(appdata_base v)
+{
+    v2f o;
+    float3 extrudedPosition = v.vertex.xyz + (v.normal * _OutlineWidth);
+    o.pos = UnityObjectToClipPos(extrudedPosition);
+    return o;
+}
+
+// In the fragment shader, you would typically return a solid color.
+```
 
 ---
 
@@ -174,6 +245,30 @@ This technique is used to generate an outline around objects in 3D graphics. It 
 
 Sobel edge detection is a computer vision technique that is used to identify edges in an image. It works by convolving a Sobel filter over the image to calculate the gradient of the image intensity. The resulting gradient is then thresholded to produce an edge map, which can be used to create an outline effect in real-time graphics. This technique can be implemented as a post-process effect, meaning it is applied after the main 3D scene has been rendered.
 
+```hlsl
+// Sobel operator implementation in post-processing effect
+
+sampler2D _MainTex; // Scene texture
+
+float4 CalcSobel(float2 uv)
+{
+    float2 texelSize = 1.0 / _ScreenParams.xy; // Inverse of screen size
+    float Gx = 0;
+    float Gy = 0;
+
+    // Apply the Sobel filter
+    // The following lines should be adjusted to sample the texture properly using texelSize for offset
+    Gx = tex2D(_MainTex, uv + float2(-texelSize.x, -texelSize.y)).r * -1;
+    // ... (additional sampling for Sobel)
+
+    Gy = tex2D(_MainTex, uv + float2(-texelSize.x, texelSize.y)).r * -1;
+    // ... (additional sampling for Sobel)
+
+    float edge = sqrt(Gx * Gx + Gy * Gy); // Magnitude of gradient
+    return edge > _SobelThreshold ? float4(1, 1, 1, 1) : float4(0, 0, 0, 0);
+}
+```
+
 ---
 
 ### Normals Edge Detection
@@ -182,6 +277,30 @@ Sobel edge detection is a computer vision technique that is used to identify edg
 
 This technique involves computing the normal vectors of an object's surface and using them to create an outline. Normal vectors point perpendicular to a surface and can be used to determine if two adjacent polygon vertices are facing in opposite directions. By comparing the normals of adjacent polygon vertices, the outline of an object can be generated by rendering a line between vertices with opposing normals. This technique is often used in combination with other techniques, such as Sobel edge detection, to produce a more refined outline.
 
+```hlsl
+// Conceptual implementation for normals-based edge detection.
+
+sampler2D _NormalMap; // Normal map
+float _EdgeWidth;
+
+float4 CalcNormalEdge(float2 uv)
+{
+    float2 texelSize = 1.0 / _ScreenParams.xy; // Inverse of screen size
+    float3 centralNormal = tex2D(_NormalMap, uv).rgb * 2.0 - 1.0;
+
+    // Compare normals in the neighborhood
+    float3 leftNormal = tex2D(_NormalMap, uv - float2(texelSize.x, 0)).rgb * 2.0 - 1.0;
+    float3 rightNormal = tex2D(_NormalMap, uv + float2(texelSize.x, 0)).rgb * 2.0 - 1.0;
+    // ... (additional samples for a better comparison)
+
+    // Compute an edge strength
+    float edgeStrength = saturate(dot(centralNormal, leftNormal)) < _EdgeWidth ? 1.0 : 0.0;
+    // Combine the results from all directions for the final edge detection
+
+    return edgeStrength;
+}
+```
+
 ---
 
 ### Dithering
@@ -189,6 +308,26 @@ This technique involves computing the normal vectors of an object's surface and 
 {% include elements/figure.html image="../assets/CelShadingArticle/Dithering.jpg" caption="Dithering effect from https://www.blendswap.com/blend/28243" %}
 
 Dithering is a technique used to create the illusion of more colour shades and tones in cel-shading, which mimics the look of hand-drawn comic book illustrations. It involves quantizing the colour palette to a set of predefined shades, shading the objects in the scene, and introducing a dithering pattern by assigning random intensities to the pixels. This creates a textured, mottled effect that simulates the natural variations in tone found in traditional hand-drawn illustrations, adding depth and richness to the scene. There are several different dithering algorithms, including ordered dithering, noise dithering, and error diffusion dithering, that all share the goal of breaking up solid blocks of colour into smaller, random pixels.
+
+```hlsl
+// Dithering effect using a pattern and quantizing color
+
+sampler2D _DitherPattern;
+float _DitherStrength;
+int _ColorLevels;
+
+float4 CalcDithering(float2 uv, float4 color)
+{
+    // Sample the dither pattern
+    float dither = tex2D(_DitherPattern, uv).r;
+
+    // Apply dithering
+    float3 quantizedColor = floor(color.rgb * _ColorLevels) / _ColorLevels;
+    float3 dithered = lerp(quantizedColor, color.rgb, dither * _DitherStrength);
+
+    return float4(dithered, color.a);
+}
+```
 
 ---
 
@@ -223,3 +362,11 @@ In conclusion, cel shading is a highly valued and versatile style that has a uni
 - Chen, X., & Nehab, D. (2009). Real-time toon shading with a single pass per-pixel lighting. ACM Transactions on Graphics (TOG), 28(3), 53.
 - Wang, Y., & Chen, Y. (2010). A survey of non-photorealistic rendering techniques. Journal of Zhejiang University SCIENCE C, 11(7), 547-566.
 - Kwon, Y., Kim, D., & Kim, J. (2010). Non-photorealistic rendering of facial expressions. Computer Animation and Virtual Worlds, 21(1-2), 67-80.
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
