@@ -13,6 +13,7 @@ open_new_tab: true # Opens external URLs in new tab (works for posts, projects a
 ### Plugins ###
 plugins:
   - jemoji
+  - jekyll-mermaid
 
 ### Navbar Settings ###
 nav_exclude: # The following paths are excluded from navbar
