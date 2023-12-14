@@ -15,6 +15,47 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 
 ---
 
+# **Technical Skills**
+
+---
+
+## Programming Languages
+- C#
+- C++
+- HLSL & CG
+- HTML & CSS
+- Python
+- Rust
+- VB
+
+<p>&nbsp;</p>
+
+## Software Experience
+- Engines
+    - Unity: 2D, 3D, VR
+    - Unreal Engine: 3D
+    - Godot: 3D
+- Adobe
+    - Photoshop
+    - After Effects
+    - Premiere Pro
+- Maya & Blender
+- Shaders & VFX via Node Based Systems
+- 3rd Party Tools: Cinemachine
+- Source Control Programs: Github, Sourcetree (BitBucket)
+- Agile Mangement Systems: Jira, Trello
+
+<p>&nbsp;</p>
+
+## Soft Skills
+- Touch Typing
+- Vim Motions
+- Project Leadership / Management
+
+<p>&nbsp;</p>
+
+--- 
+
 # **Education**
 
 ---
@@ -44,38 +85,6 @@ I’m an aspiring Programmer and Technical Artist currently a second year studen
 
 ---
 
-# **Technical Skills**
-
----
-
-## Programming Languages
-- C#
-- C++
-- HLSL & CG
-- HTML & CSS
-- Python
-- VB
-
-<p>&nbsp;</p>
-
-## Software Experience
-- Engines
-    - Unity: 2D, 3D, VR
-    - Unreal Engine: 3D
-    - Godot: 3D
-- Adobe
-    - Photoshop
-    - After Effects
-    - Premiere Pro
-- Maya & Blender
-- Shaders & VFX via Node Based Systems
-- 3rd Party Tools: Cinemachine
-- Source Control Programs: Github, Sourcetree
-- Agile Mangement Systems: Jira, Trello
-
-<p>&nbsp;</p>
-
---- 
 
 # **Work History**
 
