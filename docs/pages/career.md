@@ -41,9 +41,9 @@ I’m an aspiring Engine, Gameplay & Graphics Programmer currently a second year
     - Premiere Pro
 - Maya & Blender
 - Shaders & VFX via Node Based Systems
-- 3rd Party Tools: Cinemachine
-- Source Control Programs: Github, Sourcetree (BitBucket)
-- Agile Mangement Systems: Jira, Trello
+- Creating Unity Engine Tools
+- Source Control: Github, Sourcetree (BitBucket)
+- Agile Mangement Trello
 
 <p>&nbsp;</p>
 
