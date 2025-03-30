@@ -3,7 +3,7 @@ title: "Beginner's Guide to Game Development"
 tags: [Development]
 style: fill
 color: primary
-description: Welcome to the exciting world of game development! If you've ever dreamed of creating your own game but felt overwhelmed about where to start, this guide is for you. We'll cover the basics, from learning programming to launching your game, ensuring you have a solid foundation to begin your journey.
+description: This is a short basic step by step guide to introduce someone into the world of game development. I originally wrote this as a very long winded discord post to my friend who was interested in programming and games development but who had zero experience in both. I've adapted this to a blog post to better archive my thoughts.
 ---
 
 Welcome to the exciting world of game development! If you've ever dreamed of creating your own game but felt overwhelmed about where to start, this guide is for you. We'll cover the basics, from learning programming to launching your game, ensuring you have a solid foundation to begin your journey.

@@ -1,6 +1,6 @@
 ---
 title: "My Experience Learning to Touch Type"
-tags: [Vim, Keyboards]
+tags: [Typing, Vim, Keyboards]
 style: fill
 color: success
 description: A month ago, I met someone who completely changed how I think about typing. Watching him blaze through over 130 words per minute made me realize just how much I was missing out on. That moment sent me down a rabbit hole—learning touch typing, mastering Vim motions, and even switching to a split keyboard.
