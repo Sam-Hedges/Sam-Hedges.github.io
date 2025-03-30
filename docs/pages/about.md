@@ -5,11 +5,11 @@ permalink: /about/
 weight: 4
 ---
 
-# **About Me**
+# **📚 Favorite Books & Games**
 
 ---
 
-Hey, I’m **Sam Hedges**, a game developer with a love for **fitness, music production, and storytelling**. When I’m not programming, I’m either at the gym, producing music for my game projects, or getting lost in a great book.
+I’ve always been drawn to **epic fantasy and sci-fi**; _The Inheritance Cycle_ by Christopher Paolini being what started me off, and my all-time favorite series would have to be _Mistborn_ by Brandon Sanderson. I love stories that build deep worlds and unique characters—something I aim to bring into my own game projects. For this same reason I absolutely love the FromSoft games, with Elden Ring taking the top spot of my favourite game of all time. Partially because I love the challenge of these games, and also because of the top-tier environmental storytelling.
 
 <p>&nbsp;</p>
 
@@ -21,14 +21,6 @@ I love blending **sound and gameplay**, and I compose original tracks for my pro
 
 {% include elements/video.html id="ObDzxCUi1Jc" %}  
 > Here’s a track I made – let me know what you think!
-
-<p>&nbsp;</p>
-
-# **📚 Favorite Books & Games**
-
----
-
-I’ve always been drawn to **epic fantasy and sci-fi**; _The Inheritance Cycle_ by Christopher Paolini being what started me off, and my all-time favorite series would have to be _Mistborn_ by Brandon Sanderson. I love stories that build deep worlds and unique characters—something I aim to bring into my own game projects. For this same reason I absolutely love the FromSoft games, with Elden Ring taking the top spot of my favourite game of all time. Partially because I love the challenge of these games, and also because of the top-tier environmental storytelling.
 
 <p>&nbsp;</p>
 
