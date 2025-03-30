@@ -3,8 +3,18 @@ name: Tri-Planer Shader
 tags: [Unity, Mobile, HLSL]
 tools: [Unity, Mobile, HLSL]
 image: ../assets/TriPlanerShader/TriPlaner.png
-description: A commissioned shader made for an Indie Developer
+description: A commissioned shader made for a French Indie Developer
 ---
+
+
+# **Project Info**
+
+> 👤 <span style="color:dodgerblue">**Role:**</span> Lead Programmer <br>
+> 👥 <span style="color:dodgerblue">**Team Size:**</span> 1 <br>
+> ⌛ <span style="color:dodgerblue">**Time Frame:**</span> 1 Week <br>
+> 🛠️ <span style="color:dodgerblue">**Framework:**</span> Unity <br>
+
+<p>&nbsp;</p>
 
 # **Tri-Planer Lit Toon Shader**
 

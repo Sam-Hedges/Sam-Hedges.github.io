@@ -7,6 +7,15 @@ description: This was a collaborative project made for a University assignment
 
 ---
 
+# **Project Info**
+
+> 👤 <span style="color:dodgerblue">**Role:**</span> Graphics Programmer <br>
+> 👥 <span style="color:dodgerblue">**Team Size:**</span> 5 <br>
+> ⌛ <span style="color:dodgerblue">**Time Frame:**</span> 12 Weeks <br>
+> 🛠️ <span style="color:dodgerblue">**Framework:**</span> Unity <br>
+
+<p>&nbsp;</p>
+
 # **🏃‍♂️Endless Runner 🏃‍♂️**
 
 ---

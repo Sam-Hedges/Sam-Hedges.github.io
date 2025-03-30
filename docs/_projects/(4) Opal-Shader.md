@@ -6,6 +6,15 @@ image: ../assets/Opal/Opal.gif
 description: I created an opal effect shader for the UI element of a university project
 ---
 
+# **Project Info**
+
+> 👤 <span style="color:dodgerblue">**Role:**</span> Graphics Programmer <br>
+> 👥 <span style="color:dodgerblue">**Team Size:**</span> 5 <br>
+> ⌛ <span style="color:dodgerblue">**Time Frame:**</span> 12 Weeks <br>
+> 🛠️ <span style="color:dodgerblue">**Framework:**</span> Unity <br>
+
+<p>&nbsp;</p>
+
 # **Opal Fluid Shader for a Gauge Bar in Unity**
 
 ---

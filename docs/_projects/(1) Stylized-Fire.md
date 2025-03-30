@@ -3,20 +3,20 @@ name: Stylized Fire
 tags: [Shadergraph, Particle System]
 tools: [Shadergraph, Particle System]
 image: ../assets/StylizedFire/StylizedFire2.gif
-description: In this project I recreated a toon style fire effect inspired by Tequila Works, Rime
+description: In this project I recreated a toon style fire effect inspired by Tequila Works, Rime.
 ---
+
+# **Project Info**
+
+> 👤 <span style="color:dodgerblue">**Role:**</span> Lead Programmer <br>
+> 👥 <span style="color:dodgerblue">**Team Size:**</span> 1 <br>
+> ⌛ <span style="color:dodgerblue">**Time Frame:**</span> 3 Weeks <br>
+> 🛠️ <span style="color:dodgerblue">**Framework:**</span> Unity <br>
+
+<p>&nbsp;</p>
 
 # **🔥 Stylized Fire 🔥**
-<!--
----
 
-{% capture list_items %}
-Procedural
-Textured
-Pixel Rendered
-{% endcapture %}
-{% include elements/list.html type="toc" %}
--->
 ---
 
 Common methods of producing <span style="color:orange">**Fire VFX**</span> in **Unity**, is to use a **Particle System** or **VFX Graph**, however the many transparent quads used for each particle can create unnecessary overdraw which negatively affects performance, especially for mobile platforms.
@@ -62,33 +62,3 @@ For Alpha blending, the larger Ellipse serves as the Alpha input on the Master n
 This method is an excellent demonstration of the power of Unity Shadergraph and the versatility it provides to the developers in terms of creativity and optimization. This was an excellent learning opportunity for me to get more experience using the Unity Shadergraph and to learn more about what goes into making different effects. It is fascinating to me how with a few basic elements, combined in unique ways, you can achieve all sorts of visual outcomes. The applications of this method extend beyond just fire, and with some adjustments, it can be used for creating various other effects as well, thereby becoming a valuable tool in my VFX toolkit.
 
 {% include elements/figure.html image="../assets/StylizedFire/StylizedFire2.gif" caption="Final Fire Shader" %}
-
-{% include elements/tweet.html id="1778037717764604212" %}
-
-<!--
----
-
-### **Textured**
-
----
-
-lopers
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph1.png" caption="Placeholder" %}
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph2.gif" caption="Placeholder" %}
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph3.png" caption="Placeholder" %}
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph4.gif" caption="Placeholder" %}
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph5.gif" caption="Placeholder" %}
-
-{% include elements/figure.html image="../assets/StylizedFire/Fire1Graph6.gif" caption="Placeholder" %}
-
----
-
-### **Pixel Rendered**
-
----
--->

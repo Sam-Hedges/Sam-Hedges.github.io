@@ -1,13 +1,9 @@
 ---
-name: College Animation
-tags: [Maya, Blend Shapes, Animation]
-tools: [Maya, Blend Shapes, Animation]
-image: ../assets/Avatar/AvatarAnimation.gif
-description: "My first attempt at animation in College, based on Avatar: The Last Airbender"
----
-
-# **Avatar: The Last Airbender Animation**
-
+title: "An Exploration of Animation"
+tags: [Animation]
+style: fill
+color: warning
+description: I originally wrote this essay as part of my university coursework, but have adapted it into a blog format. This explores the history, techniques, and applications of cel-shading in computer graphics, video games and animation. It covers early use, advanced techniques, popularity in the gaming industry, and other topics such as VR/AR technology, indie games, animation, mobile games and comic book influences.
 ---
 
 In my college animation project, I chose to work with a rigged model of Aang, the central character from the popular animation series "Avatar: The Last Airbender". My original objective was to replicate one of the most iconic scenes from the show's opening sequence: the previous Avatars using their bending abilities. I wanted the create the whole sequence in which Aang, as the Avatar, bends every element (Fire, Earth, Water & Air), however as my first delve into animation, the process of learning to animate as I went along, took longer than anticipated so in the end I was only able to recreate the water bending portion. As I started I knew the real challenge would be to create a visually compelling and realistic depiction of the elements being manipulated.
@@ -25,7 +21,7 @@ Identifying the root cause of the problem required some deep diving into the tec
 To resolve this, I delved into Maya's node editor to manually adjust the deformation order, ensuring the Blend Shape deformations correctly aligned with the animation timeline. After several rounds of adjustments and previews, I achieved a much more responsive interaction between Aang and the water.
 
 <video width="100%" muted autoplay controls>
-    <source src="../assets/Avatar/AvatarAnimation.mp4" type="video/mp4">
+    <source src="../../../assets/Avatar/AvatarAnimation.mp4" type="video/mp4">
 </video>
 
 Creating this animation of Aang water bending was not just an exercise in technical skills, but also a study in problem-solving. The experience reinforced the importance of understanding the intricacies of the tools I was using and thinking creatively to overcome the challenges that arose. I'm incredibly proud of the final product, and I believe that it authentically captures the essence of the original scene while showcasing the potential of modern animation techniques. Although the animation is not perfect, I feel it was a solid attempt for my first ever go at animating a fully rigged character.
