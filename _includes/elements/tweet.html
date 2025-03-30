@@ -1,0 +1,9 @@
+{% assign tweet_id = include.id | split: '/' | last %}
+<blockquote class="twitter-tweet">
+    <a href="https://twitter.com/i/web/status/{{ tweet_id }}">View Tweet</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+{%- if include.caption -%}
+<figcaption class="figure-caption text-center">{{ include.caption }}</figcaption>
+{%- endif -%}

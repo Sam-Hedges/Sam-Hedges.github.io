@@ -63,6 +63,7 @@ This method is an excellent demonstration of the power of Unity Shadergraph and 
 
 {% include elements/figure.html image="../assets/StylizedFire/StylizedFire2.gif" caption="Final Fire Shader" %}
 
+{% include elements/tweet.html id="1778037717764604212" %}
 
 <!--
 ---

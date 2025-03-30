@@ -2,9 +2,9 @@
 name: Endless Runner
 tags: [Unity]
 tools: [Unity]
-image: ../assets/EndlessRunner/thumbnail.gif
+image: ../assets/EndlessRunner/generation.gif
 description: This was a collaborative project made for a University assignment
-status: wip
+
 ---
 
 # **🏃‍♂️Endless Runner 🏃‍♂️**
