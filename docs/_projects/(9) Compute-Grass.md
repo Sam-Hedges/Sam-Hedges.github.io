@@ -4,6 +4,7 @@ tags: [Unity]
 tools: [Unity, Compute, Shaders]
 image: ../assets/ComputeGrass/tempReplaceMe.png
 description: A Universtiy Unity Project demonstrating physics
+pinned: true
 ---
 
 # **Project Info**
