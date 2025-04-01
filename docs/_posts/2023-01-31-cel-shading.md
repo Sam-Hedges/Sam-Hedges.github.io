@@ -346,10 +346,11 @@ In conclusion, cel shading is a highly valued and versatile style that has a uni
 ## References
 
 ---
-<!--
+
 - Cel Shading. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Cel_shading>
 - Subsurface Scattering. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Subsurface_scattering>
 - Ambient Occlusion. (n.d.). Retrieved from <https://en.wikipedia.org/wiki/Ambient_occlusion>
+<!--
 - The History of Cel-Shading in Video Games. (n.d.). Retrieved from <https://www.gamersdecide.com/articles/history-cel-shading-video-games>
 - Cel-shading in VR/AR. (n.d.). Retrieved from <https://www.vrscout.com/news/cel-shading-in-vr-ar/>
 - Cel-shading in Indie Games. (n.d.). Retrieved from <https://www.gamasutra.com/blogs/JoshPresseisen/20140819/221339/CelShading_in_Indie_Games.php>
