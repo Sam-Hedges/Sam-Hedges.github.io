@@ -2,9 +2,9 @@
 name: Endless Runner
 tags: [Unity]
 tools: [Unity]
-image: ../assets/EndlessRunner/generation.gif
-description: This was a collaborative project made for a University assignment
-
+image: ../assets/EndlessRunner/preview.jpg
+description: During my 2nd year of University, with a team of my peers, we created an endless runner style game. This was for practice creating games collaboratively, as up to this point many of us had not yet worked in teams to create games.
+status: wip
 ---
 
 # **Project Info**
@@ -33,9 +33,7 @@ A different technique that mitigates this issue is to offset a single quad's UVs
 
 ### **Character**
 
----
-
-
+{% include elements/figure.html image="../assets/EndlessRunner/character.png" %}
 
 ---
 
@@ -56,9 +54,7 @@ In this article, we delve into a Unity script designed for generating procedural
 
 ## Overview of the Script Structure
 
-### Preliminaries
-
-The script begins with essential namespace imports, followed by Unity-specific attributes to enhance editor functionality:
+### Imports & Class Requirements
 
 ```csharp
 using System;
@@ -69,15 +65,11 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class GenerateMesh : MonoBehaviour { ... }
 ```
-
  
-- **ExecuteInEditMode** : Ensures the script runs both in the editor and at runtime, aiding in real-time mesh visualization. 
-- **RequireComponent** : Automatically adds required `MeshFilter` and `MeshRenderer` components, crucial for mesh generation and rendering.
-
+- **ExecuteInEditMode** : Ensures the script runs both in the editor and at runtime, allowing for real-time mesh visualization. 
+- **RequireComponent** : Automatically adds required `MeshFilter` and `MeshRenderer` components, to make this class easier to use in engine.
 
 ### Class Members
-
-The class defines several private and serialized fields:
 
 ```csharp
 private protected MeshFilter meshFilter;
@@ -102,7 +94,7 @@ private bool[,,] tiles;
 
 ### Enumerations and Flags
 
-The script introduces a `TileFace` enum decorated with the `[Flags]` attribute, allowing bitwise operations for multiple face selections:
+The `TileFace` enum decorated with the `[Flags]` attribute, allows for bitwise operations for multiple face selections:
 
 ```csharp
 [Flags]
@@ -127,11 +119,9 @@ private void Update() {
     }
 }
 ```
-
  
 - **Awake** : Initializes the `meshFilter`. 
 - **Update** : Triggers `BuildMesh` if the mesh isn't built.
-
 
 #### OnValidate Method
 
@@ -142,10 +132,8 @@ private void OnValidate() {
     built = false;
 }
 ```
-
  
 - **OnValidate** : Called when script loads or inspector values change, initializing the mesh and marking it unbuilt.
-
 
 ### Mesh Generation Logic
 
@@ -154,14 +142,12 @@ private void OnValidate() {
 ```csharp
 private void GenerateTiles(ref bool[,,] _tiles) { ... }
 ```
-
  
 - **GenerateTiles** : Populates the `tiles` 3D array based on `dimensions`, marking each tile as active.
 
-
 #### BuildMesh Method
 
-The core functionality resides in `BuildMesh`, a comprehensive method responsible for constructing the mesh:
+The core logic is in `BuildMesh`.
 
 ```csharp
 private void BuildMesh() {

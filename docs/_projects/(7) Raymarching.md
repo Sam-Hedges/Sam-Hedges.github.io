@@ -4,7 +4,7 @@ tags: [SRP]
 tools: [Unity, Shaders, Compute]
 image: ../assets/LavaLamp/lamp.gif
 description: During my 3rd year of University I could choose a field of games to study that interested me. I chose to explore Raymarching and the techniques used to achieve different effects.
-pinned: true
+status: wip
 ---
 
 

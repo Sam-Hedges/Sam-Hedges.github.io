@@ -4,6 +4,7 @@ tags: [Game, Shmup]
 tools: [Unreal, Blueprints, Animation]
 image: ../assets/CrystalChaos/editor.png
 description: "I worked in a team of 25, to produce a Top-Down, Shoot'Em'Up style game."
+status: wip
 ---
 
 

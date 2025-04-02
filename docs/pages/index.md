@@ -5,13 +5,14 @@ permalink: /
 
 {% include landing.html %}
 
+<!--
 <h1 align="center" class="wow animated slideInUp" data-wow-delay=".15s" id="-heading-"><strong>📌 Pinned</strong></h1>
-
+-->
+<!--
 <div class="card-columns m-3 mt-5">
 
-  <!-- Local Projects -->
   {% for project in site.projects %}
-    {% if project.pinned %}  <!-- Filter only pinned projects -->
+    {% if project.pinned %}  
 
       {%- assign project_type  = "local" -%}
       {%- assign project_id    = project.name | slugify -%}
@@ -34,6 +35,8 @@ permalink: /
   {% endfor %}
 
 </div>
+-->
+
 
 <!-- 
 {% include about/timeline.html source=site.data.industry-timeline %}
