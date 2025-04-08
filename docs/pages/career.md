@@ -28,11 +28,11 @@ I’m currently seeking a full-time role in a game studio (indie or AAA) where I
 
 ## Primary Languages (Advanced Proficiency)
 
--   C# (Unity & Development)
+-   C# (Unity / Godot & Systems Applications)
 
 -   C++ (Console & Systems Applications)
     
--   GLSL/HLSL (Shader Development)
+-   HLSL (Compute and Surface Shaders)
     
 
 ## Secondary Languages (Working Knowledge)
@@ -40,6 +40,8 @@ I’m currently seeking a full-time role in a game studio (indie or AAA) where I
 -   Lua (Basic Game Scripting)
     
 -   HTML & CSS (Simple Web-based Projects)
+
+-   GLSL (Compute Shaders)
 
 <p>&nbsp;</p>
 
