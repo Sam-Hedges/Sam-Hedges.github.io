@@ -1,8 +1,8 @@
 <div class="wow animated fadeIn" data-wow-delay=".15s">
 
   {%- if project.status != 'wip' -%}
-  <a href="{{ project_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank"
-    {%- endif -%}>
+  <a href="{{ project_url }}" class="project card text-themed" {% if external and site.open_new_tab %} target="_blank"
+    {% endif %}>
     {%- else -%}
     <div class="project card text-themed">
       {%- endif -%}
