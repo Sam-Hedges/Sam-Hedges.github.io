@@ -3,7 +3,7 @@ name: Retro User Interface
 tags: [Unity]
 tools: [Unity]
 image: ../assets/RetroUI/RetroUI.gif
-description: A User Interface developed for a Universtiy Unity Project
+description: Retro inspired User Interface for fun
 status: wip
 ---
 

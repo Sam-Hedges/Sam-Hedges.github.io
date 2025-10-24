@@ -3,7 +3,7 @@ name: Tri-Planer Shader
 tags: [Unity, Mobile, HLSL]
 tools: [Unity, Mobile, HLSL]
 image: ../assets/TriPlanerShader/TriPlaner.png
-description: A commissioned shader made for a French Indie Developer
+description: I was commissioned to create this shader by an Indie Studio 
 ---
 
 

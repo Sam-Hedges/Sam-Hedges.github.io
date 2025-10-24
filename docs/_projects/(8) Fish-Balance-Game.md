@@ -3,7 +3,7 @@ name: Catwalking Catfish
 tags: [Unity]
 tools: [Unity]
 image: ../assets/FishBalance/Fish.gif
-description: My first collaborative college game, with a set theme 'Balance'
+description: My first collaborative project, with the theme 'Balance'
 status: wip
 ---
 

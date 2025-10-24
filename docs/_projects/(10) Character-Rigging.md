@@ -3,7 +3,7 @@ name: Character Rigging
 tags: [Unity]
 tools: [Unity]
 image: ../assets/CharacterRigging/Pigeon.gif
-description: A collection of all the rigged characters that I've worked on or created
+description: Collection of all the characters that I've rigged
 ---
 
 # **RPG Character**

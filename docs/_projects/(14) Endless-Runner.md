@@ -3,7 +3,7 @@ name: Endless Runner
 tags: [Unity]
 tools: [Unity]
 image: ../assets/EndlessRunner/preview.jpg
-description: During my 2nd year of University, with a team of my peers, we created an endless runner style game. This was for practice creating games collaboratively, as up to this point many of us had not yet worked in teams to create games.
+description: Endless-Runner group project
 status: wip
 ---
 
