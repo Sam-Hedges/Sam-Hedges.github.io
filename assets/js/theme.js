@@ -1,6 +1,6 @@
 const STORAGE_KEY = "theme";
-const THEME_ATTR  = "data-theme";
-const QUERY_KEY   = "(prefers-color-scheme: dark)";
+const THEME_ATTR = "data-theme";
+const QUERY_KEY = "(prefers-color-scheme: dark)";
 
 const themes = {
   LIGHT: "light",
@@ -43,4 +43,15 @@ function getTheme() {
 
 function setTheme(value) {
   document.documentElement.setAttribute(THEME_ATTR, value);
+  updateFavicon(value);
+}
+
+function updateFavicon(theme) {
+  const favicon = document.getElementById("favicon");
+
+  if (!favicon) return;
+
+  favicon.href = (theme === themes.DARK
+    ? "/assets/GitHub_Invertocat_Dark.svg"
+    : "/assets/GitHub_Invertocat_Light.svg") + `?v=${Date.now()}`;
 }
