@@ -1,7 +1,7 @@
 ### Site Settings ###
 title: Sam Hedges
 description: >-
-  I'm a Gameplay Programmer and Technical Artist 🕹️
+  Graduate Engineer | Graphics & Engine Programmer
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: Sam-Hedges/Sam-Hedges.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: Sam-Hedges/Sam-Hedges.github.io
