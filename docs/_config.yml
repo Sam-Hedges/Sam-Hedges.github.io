@@ -3,8 +3,8 @@ title: Sam Hedges
 description: >-
   Graduate Engineer | Graphics & Engine Programmer
 baseurl: "" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
-repository: Sam-Hedges/Sam-Hedges.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: Sam-Hedges/Sam-Hedges.github.io
+repository: Sam-Hedges/Sam-Hedges.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 open_new_tab: true # Opens external URLs in new tab (works for posts, projects and navbar only)
 
 # open integrated terninal from docs folder and run the following command
