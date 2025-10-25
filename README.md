@@ -1,41 +1,50 @@
 <div align="center">
-  <h1><a href="https://sam-hedges.github.io/">Sam Hedges Portfolio</a></h1>
+  <h1><a href="https://sam-hedges.github.io/">My Portfolio</a></h1>
 </div>
 
 ## Overview
 
-Welcome to the repository for my personal portfolio website. This site is a showcase of my work and skills as an Aspiring Gameplay Programmer and Technical Artist. It is built with Jekyll and hosted on GitHub Pages.
+Well, well, well… Look who’s here
+
+Caught you. Yep. I see you sneaking a peek at my portfolio README.
+
+You’re not supposed to be here… or maybe you are? 😉 Either way, I hope you like what you see…
+
+Shh… don’t tell anyone you saw this part. Seriously.
 
 ## Features
 
-- **Custom Jekyll Site**: The website is powered by Jekyll, allowing for easy content management and site generation.
-- **GitHub Pages Hosting**: Leveraging GitHub Pages for seamless deployment and hosting.
-- **Professional Design**: Utilizing the [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU) theme for a professional web presence.
-
-## Contents
-
-- [About Me](https://sam-hedges.github.io/about/): Learn more about my background, interests, and the journey in the tech industry.
-- [Projects](https://sam-hedges.github.io/projects/): A collection of my work showcasing various projects I've worked on.
-- [Blog](https://sam-hedges.github.io/blog/): My thoughts and writings on various topics related to technology and programming.
-- [Career](https://sam-hedges.github.io/career/): An overview of my career aspirations and educational background.
-- [Resume](https://sam-hedges.github.io/assets/CV/CV-Sam-Hedges.pdf): My current resume detailing my skills and experiences.
+- **Jekyll Site**: because I just love typing `bundle exec jekyll serve` for fun.
+- **GitHub Pages Hosting**: saving your bank account, one free site at a time.
+- **Design**: looks professional thanks to [portfolYOU](https://github.com/YoussefRaafatNasry/portfolYOU).
 
 ## Setup
 
-To run this site locally:
+For whatever reason you might want to run this site locally:
 
-1. Clone the repository.
-2. Install Jekyll and bundler gems.
-3. Run `bundle exec jekyll serve` inside the directory.
-4. Open your browser and navigate to `localhost:4000`.
+1.  **Clone the repo**
+-   `git clone https://github.com/yourusername/portfolio.git`
 
-## Contributions
+Wait a minute. You actually want to clone my portfolio? Bold move.
+<br><br>
+    
+2.  **Install Jekyll and bundler gems**
+-   `gem install jekyll bundler`
 
-Contributions are welcome! Please feel free to submit a pull request or create an issue if you have any improvements or suggestions.
+Get your bundler away from my gems!
+<br><br>
+    
+3.  **Run the server**
+-   `bundle exec jekyll serve`
 
-## License
+You're in too deep at this point, no turning back now.
+<br><br>
+    
+4.  **Open in your browser**  
+Navigate to `localhost:4000`
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Sam-Hedges/Sam-Hedges.github.io/blob/master/LICENSE) file for details.
+And voilà. You’re officially stalking my portfolio.
+
 
 ---
 
